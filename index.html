@@ -37,29 +37,78 @@
           <a href="https://wa.me/5531998846515" target="_blank" rel="noopener" class="btn-whatsapp">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
         </div>
+      </nav> <!-- 🔹 aqui faltava fechar -->
     </div>
   </header>
 
-<section class="capa-banner" id="home">
-  <div class="banner">
+  <!-- 🖼️ Banner com carrossel -->
+  <section class="capa-banner" id="home">
+    <div class="banner">
 
-    <!-- Área onde ficam as imagens do carrossel -->
-    <div class="slides">
-      <img src="./imagens/banner1.png" alt="Banner 1" class="active">
-      <img src="./imagens/banner2.png" alt="Banner 2">
+      <!-- slides (cada .slide ocupa 100% da largura) -->
+      <div class="slides">
+        <div class="slide">
+          <img src="./imagens/banner2.jpg" alt="Banner 1">
+          <!-- Conteúdo só do primeiro banner -->
+          <div class="banner-conteudo">
+            <h1>Super Vasos</h1>
+            <p>Vasos de cimento, polietileno, barro, terras e muito mais!</p>
+            <a href="contato.html" class="btn-destaque">Fale Conosco</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="./imagens/banner1.png" alt="Banner 2">
+          <!-- sem texto aqui -->
+        </div>
+      </div>
+
+      <!-- botões de navegação para os lados-->
+      <button class="prev" aria-label="Anterior">&#10094;</button>
+      <button class="next" aria-label="Próximo">&#10095;</button>
+    </div>
+  </section>
+
+<section class="numeros">
+  <div class="container numeros-flex">
+    <div class="numero-item">
+      <h3>+15</h3>
+      <p>Anos de experiência no mercado de vasos</p>
     </div>
 
-    <!-- Texto e botão em cima do banner -->
-    <div class="banner-conteudo">
-      <h1>Super Vasos</h1>
-      <p>Vasos de cimento, polietileno, barro, terras e muito mais!</p>
-      <a href="contato.html" class="btn-destaque">Fale Conosco</a>
+    <div class="numero-item">
+      <h3>+300</h3>
+      <p>Clientes satisfeitos</p>
     </div>
 
+    <div class="numero-item">
+      <h3>100%</h3>
+      <p>Fabricação própria e qualidade garantida</p>
+    </div>
   </div>
 </section>
 
 
 
+
+<!-- Fala sobre produto vasos cimento-->
+  <section class="produtos-sobre">
+  <div class="container produtos">
+    <div class="produto-sobre">
+      <img src="./imagens/img2.jpeg" alt="Super-vasos">
+
+      <div class="produtos-text">
+        <h2>Fabricação Própria</h2>
+        <p>Com mais de 15 anos de experiência, nossa fábrica se dedica à produção de vasos de cimento de alta qualidade, combinando resistência e design moderno. Cada vaso é cuidadosamente produzido, garantindo acabamento impecável e durabilidade, ideal para residências, jardins e áreas externas.</p>
+        <p>Oferecemos uma variedade de modelos e tamanhos, todos pensados para unir funcionalidade e estilo. Nossa produção própria nos permite controlar cada etapa, garantindo que cada peça entregue seja perfeita e atenda às expectativas de nossos clientes.</p>
+      </div>
+
+    </div>
+
+  </div>
+  </section>
+
+  <!-- ✅ JS do carrossel -->
+  <script src="./carrossel.js"></script>
 </body>
 </html>

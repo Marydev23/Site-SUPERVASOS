@@ -42,7 +42,7 @@ body {
 }
 
 .logo-container img {
-  height: 50px;
+  height: 80px;
 }
 
 /* MENU */
@@ -86,54 +86,147 @@ body {
   background: #1b5e20;
 }
 
-/* 🎯 Capa / Banner */
-.capa-banner {
+/* CSS: styles relacionados ao carrossel (adicione ao seu style.css) */
+
+.capa-banner { position: relative; width: 100%; overflow: hidden; }
+.banner { position: relative; }
+
+/* container que desliza */
+.slides {
+  display: flex;
   width: 100%;
-  height: 90vh; /* quase a tela toda */
-  position: relative;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+/* cada slide ocupa 100% da viewport (1 por vez) */
+.slide {
+  min-width: 100%;
+  height: 80vh;              /* ajuste a altura como preferir */
+  position: relative;        /* importante para posicionar o conteúdo dentro */
   overflow: hidden;
 }
 
-.banner img {
+/* imagem cobre todo o slide */
+.slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* garante que a imagem preencha */
-  filter: brightness(70%); /* deixa mais escura para o texto aparecer */
+  object-fit: cover;
+  display: block;
+  filter: brightness(70%);   /* escurece um pouco para destacar texto */
 }
 
+/* conteúdo que fica sobre a imagem (apenas no 1º slide) */
 .banner-conteudo {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  left: 8%;
+  transform: translateY(-50%);
   color: var(--branco);
-  max-width: 700px;
-  padding: 1rem;
+  max-width: 500px;
+  z-index: 5;
 }
 
 .banner-conteudo h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--branco);
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  color: var(--verde);
 }
+.banner-conteudo p { margin-bottom: 1rem; font-size: 2rem; color:#fff; }
 
-.banner-conteudo p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Botão destaque */
+/* botão destaque */
 .btn-destaque {
+  display: inline-block;
   background: var(--laranja);
   color: var(--branco);
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  font-weight: 600;
+  margin-bottom: 4rem;
 }
 
-.btn-destaque:hover {
-  background: #d84315;
+/* botões de navegação */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10;
+}
+/*ta desfocando a imagem*/
+.slides .slide:nth-child(1) img {
+  filter: blur(4px); /* ajuste o valor, ex: 2px, 6px */
+}
+
+.prev { left: 12px; }
+.next { right: 12px; }
+
+.produto-sobre {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* espaço entre imagem e texto */
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.produto-sobre img {
+  width: 400px;   /* controla o tamanho */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.produtos-text {
+  flex: 1; /* ocupa o espaço restante */
+}
+
+.produtos-text h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: var(--verde);
+}
+
+.produtos-text p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--preto);
+}
+
+/* numeros */
+.numeros {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--cinza);
+}
+
+.numeros-flex {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.numero-item h3 {
+  font-size: 2rem;
+  color: var(--azul);
+}
+
+.numero-item p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+
+
+
+/* esconder os botões em telas pequenas, se quiser */
+@media (max-width: 700px) {
+  .banner-conteudo { left: 4%; max-width: 85%; text-align: left; }
+  .banner-conteudo h1 { font-size: 1.6rem; }
 }
