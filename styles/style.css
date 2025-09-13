@@ -1,0 +1,139 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Paleta de cores */
+:root {
+  --verde: #2E7D32;       
+  --laranja: #EF6C00;     
+  --cinza-cimento: #BDBDBD; 
+  --bege: #F5F5DC;        
+  --branco: #ffffff;      
+  --preto: #212121;       
+  --azul: #003b6f;
+  --azul-claro: #00B0D8;
+  --roxo: #5e4b8b;
+  --cinza: #f2f2f2;
+  --border: 0.1rem solid rgba(0, 59, 111, 0.2);
+}
+
+/* Body */
+body {
+  background-color: var(--branco);
+  color: var(--preto);
+}
+
+/* 🔝 HEADER */
+.header-principal {
+  background: var(--branco);
+  border-bottom: var(--border);
+  padding: 1rem 2rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 50px;
+}
+
+/* MENU */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--preto);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: var(--verde);
+}
+
+/* BOTÃO WHATSAPP */
+.btn-whatsapp {
+  background: var(--verde);
+  color: var(--branco);
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background: #1b5e20;
+}
+
+/* 🎯 Capa / Banner */
+.capa-banner {
+  width: 100%;
+  height: 90vh; /* quase a tela toda */
+  position: relative;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* garante que a imagem preencha */
+  filter: brightness(70%); /* deixa mais escura para o texto aparecer */
+}
+
+.banner-conteudo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--branco);
+  max-width: 700px;
+  padding: 1rem;
+}
+
+.banner-conteudo h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--branco);
+}
+
+.banner-conteudo p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Botão destaque */
+.btn-destaque {
+  background: var(--laranja);
+  color: var(--branco);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-destaque:hover {
+  background: #d84315;
+}
