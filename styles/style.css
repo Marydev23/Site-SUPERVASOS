@@ -529,7 +529,16 @@ body {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* suaviza o efeito */
 }
+
+.list-vcimento img:hover {
+  transform: scale(2); /* aumenta 20% */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* sombra bonita */
+  z-index: 2;
+  position: relative;
+}
+
 
 .list-vcimento p:first-of-type {
   font-weight: 600;
