@@ -24,10 +24,10 @@
       <!-- Menu -->
       <nav class="nav-menu">
         <ul class="menu">
-          <li><a href="#home">Início</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-          <li><a href="#sobrenos">Sobre Nós</a></li>
-          <li><a href="#contatos">Contatos</a></li>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="./sobre.html">Sobre Nós</a></li>
+          <li><a href="./contato.htmls">Contatos</a></li>
         </ul>
 
         <!-- Botão WhatsApp -->
@@ -43,6 +43,7 @@
   <section class="content">
     <h2>Bem-vindo ao catálogo</h2>
     <p>Vasos de fabricação própria - Disponíveis no varejo e atacado</p>
+    <p class="aviso">*Sujeito à indisponibilidade dos vasos</p>
   </section>
 
   <!-- Container principal -->
@@ -52,11 +53,13 @@
     <aside class="sidebar">
       <h3>Categorias</h3>
       <ul>
-        <li><a href="#">Vasos Redondos</a></li>
-        <li><a href="#">Vasos Retangular</a></li>
-        <li><a href="#">Jardineiras</a></li>
-        <li><a href="#">Bacias</a></li>
-        <li><a href="#">Itens Decorativos</a></li>
+        <li><a href="#" data-cat="todos">Todos</a></li>
+        <li><a href="#" data-cat="bocaredonda">Vasos Boca Redonda</a></li>
+        <li><a href="#" data-cat="bocaquadrada">Vasos Boca Quadrada</a></li>
+        <li><a href="#" data-cat="jardineira">Jardineiras</a></li>
+        <li><a href="#" data-cat="bacia">Bacias</a></li>
+        <li><a href="#" data-cat="bonsai">Bonsai</a></li>
+        <li><a href="#" data-cat="decorativo">Itens Decorativos</a></li>
        
       </ul>
     </aside>
@@ -65,193 +68,495 @@
     <div class="content">
       <div class="lista-vasos">
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/coneP.png" alt="Vaso Cone">
-          <p>Vaso Cone</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/Torre-baby.png" alt="Torre Baby">
+          <h4>Torre Baby</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>P - Boca 24cm / Altura 37cm</li>
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/BaciaP.png" alt="BaciaP">
-          <p>Vaso Bacia</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/Cesto-baby.png" alt="CestoP">
+         <h4>Cestinho</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>P - Boca 35cm / Altura 30cm</li>
+          </ul>        
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/CestoM.png" alt="CestoM">
-          <p>Vaso Cesto</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/Caixa.png" alt="Caixa">
+         <h4>Caixa Lisa</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>P - Boca 44cm / Altura 44cm</li>
+            <li>M - Boca 50cm / Altura 52cm</li>
+            <li>G - Boca 58cm / Altura 53cm</li>
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/LiraG.png" alt="LiraG">
-          <p>Vaso Lira</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/lira-g.png" alt="LiraG">
+          <h4>Lira</h4>
+          <p clas="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>G - Boca 60cm / Altura 50cm</li>           
+          </ul>
         </div>
 
-        <!-- 🔹 Repita o mesmo padrão para os outros vasos -->
-        <!-- Exemplo -->
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/1.png" alt="Vaso Modelo 1">
-          <p>Vaso Modelo 1</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/Cesto-trançado-liso.png" alt="cesto-trancado-liso">
+          <h4>Cesto Trançado Liso</h4>
+          <p clas="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca 46cm / Altura 48cm</li>           
+          </ul>        
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/2.png" alt="Vaso Modelo 2">
-          <p>Vaso Modelo 2</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/cesto-trancado-decorado.png" alt="cesto-trancado-dec">
+          <h4>Cesto Trançado Decorado</h4>
+          <p clas="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca 40cm / Altura 46cm</li>           
+          </ul>        
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/1.png" alt="Vaso Modelo 1">
-          <p>Vaso Modelo 1</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bacia">
+          <img src="./imagens/vasos-cimento/Bacia-baby-p.png" alt="Bacia Baby P">
+          <h4>Bacia Baby </h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>P - Boca 39cm / Altura 18cm</li>
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/2.png" alt="Vaso Modelo 2">
-          <p>Vaso Modelo 2</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bonsai">
+          <img src="./imagens/vasos-cimento/Bonsai.png" alt="Bonsai">
+          <h4>Bonsai</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>P - Boca XXcm / Altura XXcm</li>
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/BaciaP.png" alt="Bacia P">
-          <p>Vaso Bacia</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="decorativo">
+          <img src="./imagens/vasos-cimento/Girassol.png" alt="Girasol">
+          <h4>Girasol</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>Largura 40cm / Altura 6cm</li>
+
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/CestoM.png" alt="Cesto M">
-          <p>Vaso Cesto</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="jardineira">
+          <img src="./imagens/vasos-cimento/Jardineira-lisa-grand.png" alt="Jardineira Lisa Grande">
+          <h4>Jardineira 1 metro</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>Comprimento 1m / Altura 20cm</li>
+
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/LiraG.png" alt="Lira G">
-          <p>Vaso Lira</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="jardineira">
+          <img src="./imagens/vasos-cimento/Jardineira-lisa-peq.png" alt="Jardineira Lisa Pequena">
+          <h4>Jardineira Lisa </h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>Comprimento 59cm / Altura 22cm</li>
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/3.png" alt="Modelo 3">
-          <p>Vaso Modelo 3</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="jardineira">
+          <img src="./imagens/vasos-cimento/jardineira-deco-peq.png" alt="Jardineira decorada Pequena">
+          <h4>Jardineira folha</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>Comprimento 59cm / Altura 22cm</li>
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/4.png" alt="Modelo 4">
-          <p>Vaso Modelo 4</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="jardineira">
+          <img src="./imagens/vasos-cimento/Jardneira-90D.png" alt="Jardineira 90D">
+          <h4>Jardineira Decorada 90D</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>Comprimento 90cm / Altura 25cm</li>
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/5.png" alt="Modelo 5">
-          <p>Vaso Modelo 5</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bocaredonda" >
+          <img src="./imagens/vasos-cimento/abobora.png" alt="abobora">
+          <h4>Abóbora</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>Boca 47cm / Altura 34cm</li>
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/6.png" alt="Modelo 6">
-          <p>Vaso Modelo 6</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/Mascara.png" alt="Mascara">
+          <h4>Máscara</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/7.png" alt="Modelo 7">
-          <p>Vaso Modelo 7</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/9.png" alt="Modelo 9">
-          <p>Vaso Modelo 9</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/10.png" alt="Modelo 10">
-          <p>Vaso Modelo 10</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/11.png" alt="Modelo 11">
-          <p>Vaso Modelo 11</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/12.png" alt="Modelo 12">
-          <p>Vaso Modelo 12</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/13.png" alt="Modelo 13">
-          <p>Vaso Modelo 13</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/14.png" alt="Modelo 14">
-          <p>Vaso Modelo 14</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/15.png" alt="Modelo 15">
-          <p>Vaso Modelo 15</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/16.png" alt="Modelo 16">
-          <p>Vaso Modelo 16</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/17.png" alt="Modelo 17">
-          <p>Vaso Modelo 17</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/18.png" alt="Modelo 18">
-          <p>Vaso Modelo 18</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/Rendondo bonsai.png" alt="Redondo Bonsai">
-          <p>Vaso Redondo Bonsai</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/rendodinho bonsai.png" alt="Rendodinho Bonsai">
-          <p>Vaso Rendodinho Bonsai</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
-        </div>
-
-        <div class="list-vcimento">
+        <div class="list-vcimento" data-categoria="bonsai">
           <img src="./imagens/vasos-cimento/quadradinho bonsai.png" alt="Quadradinho Bonsai">
-          <p>Vaso Quadradinho Bonsai</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+          <h4>Quadradinho Bonsai</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>Boca XXcm / Altura XXcm</li>
+          </ul>
         </div>
 
-        <div class="list-vcimento">
-          <img src="./imagens/vasos-cimento/bacia bonsai.png" alt="Bacia Bonsai">
-          <p>Vaso Bacia Bonsai</p>
-          <p>Tam: Largura-20cm Altura-30cm</p>
+        <div class="list-vcimento" data-categoria="bonsai">
+          <img src="./imagens/vasos-cimento/rendodinho bonsai.png" alt="Rendodinho Bonsai">
+          <h4>Rendodinho Bonsai</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>P - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bonsai">
+          <img src="./imagens/vasos-cimento/Rendondo bonsai.png" alt="Redondo Bonsai">
+          <h4>Redondo Bonsai</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/Romano.png" alt="Romano">
+          <h4>Romano</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca 36cm / Altura 40cm</li>
+  
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/Tulipao.png" alt="Tulipão">
+          <h4>Tulipão</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>G - Boca 54cm / Altura 1,03cm</li>
+          </ul>
         </div>
 
 
-      </div>
-    </div>
-  </div>
 
+        <div class="list-vcimento" data-categoria="bacia">
+          <img src="./imagens/vasos-cimento/Bacia vitória.png" alt="Bacia-vitora">
+          <h4>Bacia Vitória</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/balde.png" alt="balde">
+          <h4>Balde</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/betel.png" alt="betel">
+          <h4>Betel</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/Caixa media folha.png" alt="caixa-media-folha">
+          <h4>Caixa Folha</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+        <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/caixa pequena.png" alt="caixa-peq">
+          <h4>Caixa Pequena</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+        <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/caixa.png" alt="caixa">
+          <h4>Caixa</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/cestao balaio.png" alt="cestao-balaio">
+          <h4>Cestão Balaio</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/cesto bambu.png" alt="cesto-bambu">
+          <h4>Cestão Bambu</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/comeia.png" alt="comeia">
+          <h4>Comeia</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/cone pequeno.png" alt="cone">
+          <h4>Cone</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/coqueiro.png" alt="coqueiro">
+          <h4>Coqueiro</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+        <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/cristal.png" alt="cristal">
+          <h4>Cristal</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+        <div class="list-vcimento" data-categoria="decorativo">
+          <img src="./imagens/vasos-cimento/folha.png" alt="folha">
+          <h4>Folha</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/jarro.png" alt="jarro">
+          <h4>Jarro</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+        <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/lirinha.png" alt="lirinha">
+          <h4>Lirinha</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/manilha.png" alt="manilha">
+          <h4>Manilha</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="decorativo">
+          <img src="./imagens/vasos-cimento/pes.png" alt="pes">
+          <h4>Pés</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/Taça abóbora.png" alt="Taça-abobora">
+          <h4>Tarça Abóbora</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/tarca alta.png" alt="Tarça Alta">
+          <h4>Tarça Alta</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+        <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/trevo.png" alt="trevo">
+          <h4>Trevo</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+            
+
+
+
+        <div class="list-vcimento" data-categoria="decorativo">
+          <img src="./imagens/vasos-cimento/pilastra.png" alt="pilastra">
+          <h4>Pilastra</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/panela.png" alt="panela">
+          <h4>Panela</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/pavao-decorado.png" alt="pavao-decorado">
+          <h4>Pavão Decorado</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/pavao-liso.png" alt="pavao-liso">
+          <h4>Pavão Liso</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+          <div class="list-vcimento" data-categoria="bocaquadrada">
+          <img src="./imagens/vasos-cimento/3.png" alt="capitel">
+          <h4>Capitel</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/4.png" alt=" riscorisco">
+          <h4>Riscorisco</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+         <div class="list-vcimento"  data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/5.png" alt="magarida">
+          <h4>Magarida</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+         <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/6.png" alt="Abóbora">
+          <h4>Abóbora</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+         
+
+       <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento//tarca.png" alt="tarcinha">
+          <h4>Tarcinha</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+        <div class="list-vcimento" data-categoria="bocaredonda">
+          <img src="./imagens/vasos-cimento/nobre.png" alt="nobre">
+          <h4>Nobre</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+        </div>
+
+         <div class="list-vcimento" data-categoria="bacia">
+          <img src="./imagens/vasos-cimento/bacia bebe.png" alt="bacia">
+          <h4>Bacia baby lisa</h4>
+          <p class="descricao">Disponível nos tamanhos:</p>
+          <ul class="tamanhos">
+            <li>M - Boca XXcm / Altura XXcm</li>
+          </ul>
+         </div>
+        </div> 
+        </div> 
+        </div>
+
+        
   <!-- Rodapé -->
   <footer class="footer">
     <div class="container-footer">
@@ -268,10 +573,10 @@
       <div class="footer-col">
         <h4>Políticas</h4>
         <ul class="lista-vertical">
-          <li><a href="#">Política de Frete</a></li>
-          <li><a href="#">Política de Troca e Devolução</a></li>
-          <li><a href="#">Política Venda no atacado</a></li>
-          <li><a href="#">Termos de Privacidade</a></li>
+          <li><a href="./rodape/Politicadefrete.html">Política de Frete</a></li>
+          <li><a href="./rodape/Política de Troca e Devolução.html">Política de Troca e Devolução</a></li>
+          <li><a href="./rodapé/politicavenda.html">Política Venda no atacado/Varejo</a></li>
+          
         </ul>
       </div>
 
@@ -296,6 +601,9 @@
       <p>© 2025 Super Vasos CNPJ: 15.417.907/0001-28. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <script src="./carrossel.js"></script>
+
 
 </body>
 </html>

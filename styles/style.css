@@ -20,6 +20,10 @@
   --roxo: #5e4b8b;
   --cinza: #f2f2f2;
   --border: 0.1rem solid rgba(0, 59, 111, 0.2);
+  --marrom: #6B3F2B;
+  --cor-barro: #C76B3A;
+  --cor-cinza-escuro: #333333;
+
 }
 
 /* Body */
@@ -53,7 +57,7 @@ body {
   height: 100%; /* logo ocupa a altura do container sem expandir o header */
   width: auto;  /* mantém proporção */
   display: block;
-  max-height: 80px; /* limite máximo */
+  max-height: 90px; /* limite máximo */
 }
 
 
@@ -80,12 +84,12 @@ body {
   color: var(--verde);
 }
 
-/* BOTÃO WHATSAPP */
+/* BOTÃO WHATSAPP dos cards */
 .btn-whatsapp {
   background: var(--verde);
   color: var(--branco);
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
+  padding: 0.8rem 3rem;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   display: flex;
@@ -98,7 +102,6 @@ body {
   background: #1b5e20;
 }
 
-/* CSS: styles relacionados ao carrossel (adicione ao seu style.css) */
 
 .capa-banner { position: relative; width: 100%; overflow: hidden; }
 .banner { position: relative; }
@@ -111,7 +114,7 @@ body {
   will-change: transform;
 }
 
-/* cada slide ocupa 100% da viewport (1 por vez) */
+
 .slide {
   min-width: 100%;
   height: 80vh;              /* ajuste a altura como preferir */
@@ -149,9 +152,9 @@ body {
 /* botão destaque */
 .btn-destaque {
   display: inline-block;
-  background: var(--laranja);
+  background: var(--verde);
   color: var(--branco);
-  padding: 0.7rem 1.2rem;
+  padding: 0.8rem 3rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
@@ -181,49 +184,89 @@ body {
 .prev { left: 12px; }
 .next { right: 12px; }
 
+
+/*sobre o produto */
+
+
+
+.produtos-sobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 10%;
+  background: #f4f4f4; /* cor de fundo suave */
+}
+
 .produto-sobre {
   display: flex;
-  align-items: center; /* alinha imagem e texto pelo meio */
-  gap: 3rem; /* espaço entre imagem e texto */
-  margin: 60px auto;
+  align-items: center;
+  gap: 50px;
   max-width: 1200px;
-  padding: 20px;
+  flex-wrap: wrap; /* adapta bem em telas pequenas */
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.produto-sobre:hover {
+  transform: scale(1.01);
 }
 
 .produto-sobre img {
-  width: 30%;   /* imagem ocupa 45% da largura */
-  max-width: 500px; /* limita o tamanho máximo */
-  height: auto;
+  width: 40%;
+  max-width: 450px;
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-sobre img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
 }
 
 .produtos-text {
-  flex: 1; /* texto ocupa o espaço restante */
+  flex: 1;
+  text-align: justify;
 }
 
 .produtos-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.4rem;
   color: #2c3e50;
-  font-weight: 700;
+  margin-bottom: 1.2rem;
+  font-weight: 800;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.produtos-text h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #3a5a40; /* verde escuro elegante */
+  margin-top: 10px;
+  border-radius: 2px;
 }
 
 .produtos-text p {
   font-size: 1.1rem;
+  color: #555;
   line-height: 1.8;
-  color: #444;
   margin-bottom: 1rem;
-  text-align: justify; /* deixa o texto alinhadinho dos dois lados */
 }
+
+
 
 
 /* numeros */
 .numeros {
   padding: 3rem 2rem;
   text-align: center;
-  background: var(--cinza);
+  background: var(--branco);
 }
 
 .numeros-flex {
@@ -369,98 +412,8 @@ body {
 .btn-solicitar:hover {
   background: #219150;
 }
-/* footer */
 
-.footer {
-  background: #2E7D32; /* verde principal */
-  color: #FFFFFF;       /* texto branco para contraste */
-  padding: 60px 20px 30px 20px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.container-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.footer-col { flex: 1; min-width: 220px; }
-.lista-vertical {
-  list-style: none; /* remove marcadores */
-  padding: 0;
-  margin: 0;
-}
-
-.lista-vertical li {
-  margin-bottom: 10px; /* espaço entre os itens */
-}
-
-.lista-vertical li a {
-  text-decoration: none;
-  color: var(--branco); /* cor do link */
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.lista-vertical li a:hover,
-.lista-vertical li a.ativo {
-  color: #27ae60; /* verde destaque */
-}
-
-
-
-
-.footer-col h4 {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  color: #FFFFFF; /* título branco */
-  text-transform: uppercase;
-  position: relative;
-}
-
-.footer-col h4::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #F5F5DC; /* linha bege clara */
-  margin-top: 6px;
-  border-radius: 2px;
-}
-
-.footer-col p, .footer-col a {
-  font-size: 0.95em;
-  margin-bottom: 12px;
-  color: #FFFFFF; /* texto branco */
-  text-decoration: none;
-  line-height: 1.6;
-}
-
-.footer-col a:hover { color: #EF6C00; } /* laranja no hover */
-
-.footer i { margin-right: 8px; color: #FFFFFF; font-size: 1.1em; }
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.85em;
-  color: #F5F5DC; /* bege para contraste suave */
-  border-top: 1px solid #BDBDBD; /* linha cinza cimento */
-  padding-top: 15px;
-}
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Corpo */
+/* Corpo  */
 body {
   background-color: #fff;
   color: #212121;
@@ -473,45 +426,76 @@ body {
   background: var(--branco);
 }
 
+/*-----------------CATALAGO BARRO----------------------*/
+
+.container-vasobarro{
+  display: flex;
+  align-items: flex-start;
+  background:var(--branco);
+}
+
+/*------------------------CATALAGO VARIADOS-------------------*/
+
+
+.container-variados{
+  display: flex;
+  align-items: flex-start;
+  background:var(--branco);
+}
+
+
 /* ------------------ Sidebar lateral ------------------ */
 .sidebar {
   width: 220px;
-  background: var(--branco);
+  background-color: #fff;              /* branco por dentro */
   padding: 20px;
-  border-right: 2px solid #ddd;
-  min-height: 100vh; /* ocupa altura inteira da tela */
-  position: sticky;  /* sidebar fixa ao rolar */
+  border-left: 4px solid var(--cinza-cimento);         /* contorno */
+  min-height: 100vh;
+  position: sticky;
   top: 0;
 }
+
 .sidebar h3 {
   margin-bottom: 20px;
   font-size: 1.2rem;
   color: #333;
   font-weight: bold;
-  text-transform: uppercase; /* caixa alta */
-  padding: 20px;
-  text-align: left; /* alinhado à esquerda */
+  text-transform: uppercase;
+  padding: 8px;
+  background-color: #f5f5f5;  /* cinza leve no título */
+  border-bottom: 1px solid #ddd; /* linha separadora sob o título */
 }
+
 
 .sidebar ul {
   list-style: none;
   padding: 0;
-  text-align: left;
+  margin: 0;
 }
 
 .sidebar ul li {
-  margin: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid #eee; /* linha separando os itens */
+}
+
+.sidebar ul li:last-child {
+  border-bottom: none; /* tira a linha do último */
 }
 
 .sidebar ul li a {
+  display: block;              /* ocupa a largura inteira */
+  padding: 10px 12px;          /* espaço interno */
   text-decoration: none;
   color: #444;
-  font-weight: bold;
-  transition: color 0.3s;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 4px;          /* cantos arredondados leves */
 }
 
 .sidebar ul li a:hover {
-  color: var(--azul);
+  background-color: #f5f5f5;   /* fundo cinza no hover */
+  color: var(--verde);         /* muda cor do texto */
+  padding-left: 18px;          /* dá um "empurrãozinho" pro texto */
 }
 
 /* ------------------ Conteúdo da pagina catalago ------------------ */
@@ -522,10 +506,9 @@ body {
 }
 
 .content h2 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   color: var(--branco);
-  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   padding: 2rem ;
@@ -538,16 +521,183 @@ body {
     padding: 10px;
   }
 
+.aviso {
+  color: var(--cinza); 
+  font-weight: normal; 
+  font-style: italic;  
+  font-size: 1px;     
+  text-align: left;    
+  margin-top: 5px;    
+  opacity: 0.8;    
+}
 
-/* ------------------ Lista de Vasos ------------------ */
-.lista-vasos {
+
+
+  /*------------------- catalago (fundo) lista barro-----------------*/
+.content-list {
+  flex: 1;
+  padding: 3px;
+  background-color: var(--cor-barro);
+}
+
+.content-list h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--branco);
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem ;
+
+}
+.content-list p {
+    color: var(--branco);
+    font-size: 1.5rem ;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+    /*------------------- catalago lista barro-----------------*/
+.content-variado {
+  flex: 1;
+  padding: 3px;
+  background-color: var(--branco);
+}
+
+.content-variado h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--branco);
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem ;
+
+}
+.content-variado p {
+    color: var(--branco);
+    font-size: 1.5rem ;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+
+
+/*---------------------------container (capa) catalago barro--------------*/
+
+.container-barro {
+  flex: 1;
+  padding: 3px;
+  background-color: var(--cor-barro);
+}
+
+.container-barro h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--branco);
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem ;
+
+}
+.container-barro p {
+    color: var(--branco);
+    font-size: 1.5rem ;
+    text-align: center;
+    padding: 10px;
+  }
+
+/* ------------------ Lista de Vasos de barro ------------------ */
+
+
+.list-barro {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; /* alinhado à esquerda, acompanha sidebar */
-  gap: 30px;
+  gap: 40px;
   padding: 50px 20px;
   background-color: #fafafa;
   flex: 1; /* ocupa todo o espaço disponível ao lado da sidebar */
+}
+
+.list-vbarro{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s;
+
+}
+.list-vbarro h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--preto); 
+  margin-bottom: 8px;
+}
+
+.list-vbarro .descricao {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.list-vbarro .tamanhos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.80rem;
+  color: #555;
+  text-align: left;
+}
+
+.list-vbarro.tamanhos li {
+  margin: 4px 0;
+  padding-left: 12px;
+  position: relative;
+}
+
+
+
+.list-vbarro img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* suaviza o efeito */
+}
+
+.list-vbarro img:hover {
+  transform: scale(1.2); /* aumenta em 20% */
+  /*box-shadow: 0 8px 20px rgba(0,0,0,0.8); /* sombra bonita */
+  z-index: 2;
+  position: relative;
+}
+
+.list-vbarro p:first-of-type {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--marrom);
+  margin-bottom: 8px;
+}
+
+.list-vbarro p:last-of-type {
+  font-size: 0.9rem;
+  color: #555;
+}
+  
+
+/* ------------------ Lista de Vasos cimento------------------ */
+.lista-vasos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  gap: 40px;
+  padding: 50px 20px;
+  background-color: #fafafa;
+  flex: 1; 
 }
 
 .list-vcimento {
@@ -560,6 +710,45 @@ body {
   transition: transform 0.2s;
 }
 
+.list-vcimento h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--preto); /* verde */
+  margin-bottom: 8px;
+  font-family: 'Marcellus', serif;
+  letter-spacing: 0.5px;
+
+}
+
+.list-vcimento .descricao {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.list-vcimento .tamanhos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.80rem;
+  color: #555;
+  text-align: left;
+}
+
+.list-vcimento .tamanhos li {
+  margin: 4px 0;
+  padding-left: 12px;
+  position: relative;
+}
+
+.list-vcimento .tamanhos li::before {
+  content: "*"; /* bolinha estilizada */
+  position: absolute;
+  left: 0;
+  color: #2E7D32; /* verde igual ao título */
+}
+
+
 .list-vcimento:hover {
   transform: translateY(-5px);
 }
@@ -570,15 +759,15 @@ body {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* suaviza o efeito */
+  transition: transform 0.4s ease;
 }
 
 .list-vcimento img:hover {
-  transform: scale(1.4); /* aumenta em 20% */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.8); /* sombra bonita */
+  transform: scale(1.4); /* aumenta de forma suave */
   z-index: 2;
   position: relative;
 }
+
 
 .list-vcimento p:first-of-type {
   font-weight: 600;
@@ -592,94 +781,102 @@ body {
   color: #555;
 }
 
-/* ------------------ Responsividade ------------------ */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* sidebar vai para cima no celular */
-  }
 
-  .sidebar {
-    width: 100%;
-    border-right: none;
-    border-bottom: 2px solid #ddd;
-    min-height: auto;
-    position: relative; /* deixa de ser sticky no mobile */
-  }
 
-  .lista-vasos {
-    justify-content: center; /* centraliza os vasos */
-  }
+
+
+/*------------------Produtos variados catalago----------------*/
+
+.content-variados {
+  flex: 1;
+  padding: 3px;
+  background-color: #DAD2C1;
 }
 
+.content-variados h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #3E4E32;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem ;
 
-/* ------------------ Rodapé ------------------ */
-.footer {
-  background: #2E7D32;
-  color: #fff;
-  padding: 60px 20px 30px 20px;
 }
+.content-variados p {
+    color: #5B6B45;
+    font-size: 1.5rem ;
+    text-align: center;
+    padding: 10px;
+  }
 
-.container-footer {
+/*----------------Lista catalago ------------*/
+
+.lista-variados {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: flex-start; /* alinhado à esquerda, acompanha sidebar */
+  gap: 70px;
+  padding: 60px 40px;
+  background-color: #fafafa;
+  flex: 1; /* ocupa todo o espaço disponível ao lado da sidebar */
 }
 
-.footer-col {
-  flex: 1;
-  min-width: 220px;
+.list-vvariados{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  transition: opacity 0.3s ease; /*ADICONAR PARA PASSAR TRANSIÇÃO BONITA */
+
+}
+.list-vvariados h4 {
+  font-size: 1rem; 
+  font-weight: 600;
+  color:#333333; /* verde */
+  margin-bottom: 6px;
+  padding: 15px;
 }
 
-.footer-col h4 {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  color: #fff;
-  text-transform: uppercase;
+
+.list-vvariados img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* suaviza o efeito */
+}
+
+.list-vvariados img:hover {
+  /*transform: scale(1); /* aumenta em 20% */
+ /* box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* sombra bonita */
+  z-index: 2;
   position: relative;
 }
 
-.footer-col h4::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #F5F5DC; /* linha bege clara */
-  margin-top: 6px;
-  border-radius: 2px;
-}
-
-.footer-col p, 
-.footer-col a {
-  font-size: 0.95em;
-  margin-bottom: 12px;
-  color: #fff;
+.btn-variados{
+  display: inline-block;
+  background: var(--verde);
+  color: var(--branco);
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
   text-decoration: none;
-  line-height: 1.6;
+  font-weight: 600;
+  margin-bottom: 4rem;
 }
 
-.footer-col a:hover {
-  color: #EF6C00; /* laranja do hover */
+
+
+/*MUDA DE COR NO SIDEBAR */
+.sidebar a.ativo {
+  font-weight: bold;
+  color: var(--preto);
+  text-decoration: underline;
+  
 }
 
-.footer i {
-  margin-right: 8px;
-  color: #fff;
-  font-size: 1.1em;
-}
-
-.footer-bottom {
-  width: 100%; /* ocupa a largura total da tela */
-  text-align: center; /* centraliza o texto */
-  margin-top: 40px;
-  font-size: 0.85em;
-  color: #F5F5DC;
-  border-top: 1px solid #BDBDBD;
-  padding: 15px 0; /* top e bottom */
-  background-color: #2E7D32; /* opcional, se quiser o fundo do footer */
-}
 
 
 /* Lista vertical */
@@ -704,29 +901,9 @@ body {
   color: #EF6C00;
 }
 
-/* ------------------ Responsividade ------------------ */
-@media (max-width: 900px) {
-  .lista-vasos {
-    gap: 20px;
-  }
 
-  .list-vcimento {
-    width: 40%;
-  }
-}
 
-@media (max-width: 600px) {
-  .list-vcimento {
-    width: 100%;
-  }
-
-  .container-footer {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-/* ------------------ Contato ------------------ */
+/* ------------------ pagina Contato ------------------ */
 .contato {
   background-color: #fafafa;
   padding: 60px 20px;
@@ -749,6 +926,7 @@ body {
 }
 
 /* Formulário */
+
 .contato form {
   display: flex;
   flex-direction: column;
@@ -806,6 +984,374 @@ body {
   border: 0;
   margin-top: 20px;
 }
+.endereco-loja{
+  color: var(--preto);
+  padding: 60px 20px 30px 20px;
+}
+
+
+/*Endereço no index*/
+
+.endereco {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8; /* fundo suave */
+}
+
+.horario-endereco {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px; /* espaço entre info e mapa */
+}
+
+.info {
+  flex: 1; /* ocupa metade do espaço disponível */
+  min-width: 280px;
+}
+
+.horario-atendimento h3 {
+  color: #333;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #ccc; /* linha fina abaixo do título */
+  padding-bottom: 5px;
+}
+
+.horario-atendimento ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px; /* espaço entre listas */
+}
+
+.horario-atendimento li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.mapa {
+  flex: 1; /* ocupa a outra metade */
+  min-width: 300px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px; /* cantos arredondados */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+
+
+/* footer FINAL DO SITE */
+
+.footer {
+  background: #2E7D32; /* verde principal */
+  color: #FFFFFF;       /* texto branco para contraste */
+  padding: 60px 20px 30px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.footer-col { flex: 1; min-width: 220px; }
+.lista-vertical {
+  list-style: none; /* remove marcadores */
+  padding: 0;
+  margin: 0;
+}
+
+.lista-vertical li {
+  margin-bottom: 10px; /* espaço entre os itens */
+}
+
+.lista-vertical li a {
+  text-decoration: none;
+  color: var(--branco); /* cor do link */
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.lista-vertical li a:hover,
+.lista-vertical li a.ativo {
+  color: #27ae60; /* verde destaque */
+}
+
+
+
+.footer-col h4 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #FFFFFF; /* título branco */
+  text-transform: uppercase;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #F5F5DC; /* linha bege clara */
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.footer-col p, .footer-col a {
+  font-size: 0.95em;
+  margin-bottom: 12px;
+  color: #FFFFFF; /* texto branco */
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.footer-col a:hover { color: #EF6C00; } /* laranja no hover */
+
+.footer i { margin-right: 8px; color: #FFFFFF; font-size: 1.1em; }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.85em;
+  color: #F5F5DC; /* bege para contraste suave */
+  border-top: 1px solid #BDBDBD; /* linha cinza cimento */
+  padding-top: 15px;
+}
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* ------------------ Rodapé ------------------ */
+.footer {
+  background: #2E7D32;
+  color: #fff;
+  padding: 60px 20px 30px 20px;
+}
+
+.container-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-col h4 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #F5F5DC;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.footer-col p, 
+.footer-col a {
+  font-size: 0.95em;
+  margin-bottom: 12px;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.footer-col a:hover {
+  color: #EF6C00; 
+}
+
+.footer i {
+  margin-right: 8px;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.footer-bottom {
+  width: 100%; 
+  text-align: center; 
+  margin-top: 40px;
+  font-size: 0.85em;
+  color: #F5F5DC;
+  border-top: 1px solid #BDBDBD;
+  padding: 15px 0; 
+  background-color: #2E7D32; 
+
+
+  /*politica de venda */
+/*criar o CSS DE POLITICA DE VENDA AQUI8*/
+
+
+
+/* quem somos */
+
+.quem-somos {
+  padding: 60px 20px;
+  background-color: #fafafa;
+}
+
+.container-sobre {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.imagem-sobre img {
+  width: 100%;
+  max-width: 400px; /* aumenta o tamanho da imagem */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.texto-sobre {
+  flex: 1;
+  min-width: 280px; /* evita quebra estranha em telas pequenas */
+}
+
+.texto-sobre h2 {
+  font-size: 2.2rem;
+  color: #2E7D32;
+  margin-bottom: 20px;
+}
+
+.texto-sobre p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .container-sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagem-sobre img {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+/* esconder os botões em telas pequenas, se quiser */
+@media (max-width: 700px) {
+  .banner-conteudo { left: 4%; max-width: 85%; text-align: left; }
+  .banner-conteudo h1 { font-size: 1.6rem; }
+}
+
+
+/* ------------------ sidebar catalago cimento ------------------ */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* sidebar vai para cima no celular */
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #ddd;
+    min-height: auto;
+    position: relative; /* deixa de ser sticky no mobile */
+  }
+
+  .lista-vasos {
+    justify-content: center; /* centraliza os vasos */
+  }
+}
+}
+
+
+/* ------------------ Responsividade CATALAGO CIMENTO ------------------ */
+@media (max-width: 900px) {
+  .lista-vasos {
+    gap: 20px;
+  }
+
+  .list-vcimento {
+    width: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .list-vcimento {
+    width: 100%;
+  }
+
+  .container-footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 880px) {
+  .horario-endereco {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .mapa iframe {
+    min-height: 300px;
+  }
+}
+
+/* do sobre produto */
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .produto-sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .produto-sobre img {
+    width: 80%;
+  }
+
+  .produtos-text h2 {
+    font-size: 2rem;
+  }
+}
 
 /* ------------------ Responsividade ------------------ */
 @media (max-width: 768px) {
@@ -832,62 +1378,3 @@ body {
   }
 }
 
-.quem-somos {
-  padding: 60px 20px;
-  background-color: #fafafa;
-}
-
-.container-sobre {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* para responsividade */
-}
-
-.imagem-sobre img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-
-.texto-sobre {
-  flex: 1;
-}
-
-.texto-sobre h2 {
-  font-size: 2.5rem;
-  color: #2E7D32;
-  margin-bottom: 20px;
-}
-
-.texto-sobre p {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 15px;
-  text-align: justify;
-}
-
-/* Responsividade */
-@media (max-width: 900px) {
-  .container-sobre {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .texto-sobre p {
-    text-align: center;
-  }
-}
-
-
-
-
-/* esconder os botões em telas pequenas, se quiser */
-@media (max-width: 700px) {
-  .banner-conteudo { left: 4%; max-width: 85%; text-align: left; }
-  .banner-conteudo h1 { font-size: 1.6rem; }
-}
