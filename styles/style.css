@@ -522,14 +522,15 @@ body {
   }
 
 .aviso {
-  color: var(--cinza); 
-  font-weight: normal; 
-  font-style: italic;  
-  font-size: 1px;     
-  text-align: left;    
-  margin-top: 5px;    
-  opacity: 0.8;    
+  color: #777;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 13px;     
+  text-align: center;  
+  margin-top: 8px;
+  opacity: 0.8;
 }
+
 
 
 
@@ -763,7 +764,7 @@ body {
 }
 
 .list-vcimento img:hover {
-  transform: scale(1.4); /* aumenta de forma suave */
+  transform: scale(1.6); /* aumenta de forma suave */
   z-index: 2;
   position: relative;
 }
@@ -780,6 +781,43 @@ body {
   font-size: 0.9rem;
   color: #555;
 }
+
+.img-hover {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+ 
+}
+
+.img-hover img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.4s ease, transform 0.6s ease; 
+  display: block;
+  transform-origin: center center; 
+}
+
+.img-hover .foto-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; 
+   transform: scale(1);
+  
+}
+
+.img-hover:hover .foto-hover {
+  opacity: 1;
+  transform: scale(1.09);
+}
+
+.img-hover:hover .foto-principal {
+  opacity: 0; 
+}
+
+
 
 
 
@@ -1046,6 +1084,57 @@ body {
 }
 
 
+ /*politica de venda */
+/*criar o CSS DE POLITICA DE VENDA AQUI8*/
+
+
+.container-venda{
+  background-color: #003b6f;
+}
+
+
+/* quem somos--------------------------------------------------------- */
+
+.quem-somos {
+  padding: 60px 20px;
+  background-color: #fafafa;
+}
+
+.container-sobre {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.imagem-sobre img {
+  width: 100%;
+  max-width: 400px; /* aumenta o tamanho da imagem */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.texto-sobre {
+  flex: 1;
+  min-width: 280px; /* evita quebra estranha em telas pequenas */
+}
+
+.texto-sobre h2 {
+  font-size: 2.2rem;
+  color: #2E7D32;
+  margin-bottom: 20px;
+}
+
+.texto-sobre p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
 
 
 /* footer FINAL DO SITE */
@@ -1208,55 +1297,11 @@ body {
   padding: 15px 0; 
   background-color: #2E7D32; 
 
-
-  /*politica de venda */
-/*criar o CSS DE POLITICA DE VENDA AQUI8*/
-
-
-
-/* quem somos */
-
-.quem-somos {
-  padding: 60px 20px;
-  background-color: #fafafa;
 }
+ 
+/* ------------------ RESPONSIVIDADE GERAL ------------------ */
 
-.container-sobre {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.imagem-sobre img {
-  width: 100%;
-  max-width: 400px; /* aumenta o tamanho da imagem */
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-
-.texto-sobre {
-  flex: 1;
-  min-width: 280px; /* evita quebra estranha em telas pequenas */
-}
-
-.texto-sobre h2 {
-  font-size: 2.2rem;
-  color: #2E7D32;
-  margin-bottom: 20px;
-}
-
-.texto-sobre p {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 15px;
-  text-align: justify;
-}
-
-/* Responsivo para celular */
+/* SOBRE NÓS */
 @media (max-width: 768px) {
   .container-sobre {
     flex-direction: column;
@@ -1268,19 +1313,23 @@ body {
   }
 }
 
-
-
-
-
-
-/* esconder os botões em telas pequenas, se quiser */
+/* BANNER (esconde ou ajusta botões) */
 @media (max-width: 700px) {
-  .banner-conteudo { left: 4%; max-width: 85%; text-align: left; }
-  .banner-conteudo h1 { font-size: 1.6rem; }
+  .banner-conteudo {
+    left: 4%;
+    max-width: 85%;
+    text-align: left;
+  }
 }
 
+  .banner-conteudo h1 {
+    font-size: 1.6rem;
+  }
 
-/* ------------------ sidebar catalago cimento ------------------ */
+
+/* ------------------ CATÁLOGO CIMENTO ------------------ */
+
+/* Layout principal e sidebar */
 @media (max-width: 768px) {
   .container {
     flex-direction: column; /* sidebar vai para cima no celular */
@@ -1298,10 +1347,8 @@ body {
     justify-content: center; /* centraliza os vasos */
   }
 }
-}
 
-
-/* ------------------ Responsividade CATALAGO CIMENTO ------------------ */
+/* Ajustes de grid e tamanhos */
 @media (max-width: 900px) {
   .lista-vasos {
     gap: 20px;
@@ -1323,7 +1370,7 @@ body {
   }
 }
 
-/* Responsividade para celulares */
+/* ------------------ MAPA E ENDEREÇO ------------------ */
 @media (max-width: 880px) {
   .horario-endereco {
     flex-direction: column;
@@ -1335,9 +1382,7 @@ body {
   }
 }
 
-/* do sobre produto */
-
-/* Responsividade */
+/* ------------------ PRODUTO: SEÇÃO SOBRE ------------------ */
 @media (max-width: 900px) {
   .produto-sobre {
     flex-direction: column;
@@ -1353,11 +1398,12 @@ body {
   }
 }
 
-/* ------------------ Responsividade ------------------ */
+/* ------------------ CONTATO ------------------ */
 @media (max-width: 768px) {
   .contato h2 {
     font-size: 2rem;
   }
+
   .contato h3 {
     font-size: 1.5rem;
   }
@@ -1367,14 +1413,15 @@ body {
   .contato form {
     gap: 15px;
   }
+
   .contato input,
   .contato textarea {
     font-size: 0.95rem;
     padding: 10px 12px;
   }
+}
   .contato button {
     font-size: 0.95rem;
     padding: 10px 20px;
   }
-}
 

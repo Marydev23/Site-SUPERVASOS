@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
     produtos = document.querySelectorAll('.list-vcimento');
   }
 
+  if (document.querySelector('.list-vbarro')) {
+    produtos = document.querySelectorAll('.list-vbarro');
+  }
+
+  
+
   // Se não tiver produtos (nenhuma das duas páginas), sai fora
   if (!links.length || !produtos.length) return;
 
