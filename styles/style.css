@@ -32,6 +32,7 @@ body {
   color: var(--preto);
 }
 
+
 /* 🔝 HEADER */
 .header-principal {
   background: var(--branco);
@@ -43,21 +44,21 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px; /* altura fixa do header */
+  height: 50px; /* altura fixa do header */
   padding: 0 20px; /* espaço interno */
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  height: 100%; /* ocupa a altura do header, mas não aumenta */
+  height: 100%; 
 }
 
 .logo-container img {
-  height: 100%; /* logo ocupa a altura do container sem expandir o header */
-  width: auto;  /* mantém proporção */
+  height: 100%; 
+  width: auto;  
   display: block;
-  max-height: 90px; /* limite máximo */
+  max-height: 100px; 
 }
 
 
@@ -102,9 +103,16 @@ body {
   background: #1b5e20;
 }
 
+/*capa banner*/
 
-.capa-banner { position: relative; width: 100%; overflow: hidden; }
-.banner { position: relative; }
+.capa-banner {
+   position: relative;
+  width: 100%; 
+  overflow: hidden; 
+}
+.banner { 
+  position: relative; 
+}
 
 /* container que desliza */
 .slides {
@@ -123,43 +131,64 @@ body {
 }
 
 /* imagem cobre todo o slide */
+
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;         /* cobre toda a área */
+  object-position: bottom;   /* puxa a imagem pra baixo (mostra os vasos) */
   display: block;
-  filter: brightness(70%);   /* escurece um pouco para destacar texto */
+  filter: brightness(90%);
 }
 
 /* conteúdo que fica sobre a imagem (apenas no 1º slide) */
 .banner-conteudo {
   position: absolute;
   top: 50%;
-  left: 8%;
+  left: 10%;
   transform: translateY(-50%);
-  color: var(--branco);
-  max-width: 500px;
-  z-index: 5;
+  max-width: 600px;
+  z-index: 10;
+  
 }
 
-.banner-conteudo h1 {
-  font-size: 5rem;
-  margin-bottom: 0.5rem;
+.banner-conteudo h5 {
+  font-size: 4rem; /* Aumenta bem o título */
+  line-height: 1.4;
+  margin-bottom: 1rem;
   color: var(--verde);
+  font-weight: 700;
 }
-.banner-conteudo p { margin-bottom: 1rem; font-size: 2rem; color:#fff; }
+
+.banner-conteudo p { 
+  margin-bottom: 2rem; 
+  font-size: 2rem; /* texto maior também */
+  color: #fff;
+  line-height: 1.4;
+}
 
 /* botão destaque */
-.btn-destaque {
+.btn-catalago {
   display: inline-block;
   background: var(--verde);
   color: var(--branco);
-  padding: 0.8rem 3rem;
-  border-radius: 6px;
+  padding: 0.7rem 1.5rem; /* altura menor e largura menor */
+  font-size: 1rem; /* tamanho do texto reduzido */
+  border-radius: 8px;
+  font-weight: 700;
   text-decoration: none;
-  font-weight: 600;
-  margin-bottom: 4rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
+
+.btn-catalago:hover {
+  background: #fff;
+  color: var(--verde);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 
 /* botões de navegação */
 .prev, .next {
@@ -175,11 +204,10 @@ body {
   font-size: 22px;
   cursor: pointer;
   z-index: 10;
+
 }
 /*ta desfocando a imagem*/
-.slides .slide:nth-child(1) img {
-  filter: blur(4px); /* ajuste o valor, ex: 2px, 6px */
-}
+
 
 .prev { left: 12px; }
 .next { right: 12px; }
@@ -258,6 +286,20 @@ body {
   line-height: 1.8;
   margin-bottom: 1rem;
 }
+
+.btn-saibamais{
+    display: inline-block;
+  padding: 12px 25px;
+  background: var(--cor-cinza-escuro);
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+
+
 
 
 
@@ -632,10 +674,11 @@ body {
 
 }
 .list-vbarro h4 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--preto); 
   margin-bottom: 8px;
+  font-family: 'Marcellus', serif;
 }
 
 .list-vbarro .descricao {
@@ -1088,8 +1131,24 @@ body {
 /*criar o CSS DE POLITICA DE VENDA AQUI8*/
 
 
-.container-venda{
-  background-color: #003b6f;
+.container-venda {
+  max-width: 1200px;
+  padding: 3rem 1rem;
+}
+
+.conteudo-venda h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #2c3e50; /* título em tom escuro */
+}
+
+.conteudo-venda section {
+  margin-bottom: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 

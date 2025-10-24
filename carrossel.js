@@ -11,7 +11,6 @@ function showSlide(index) {
   if (index < 0) index = slides.length - 1;
   if (index >= slides.length) index = 0;
   currentIndex = index;
-
   slidesContainer.style.transform = `translateX(-${index * 100}%)`;
 }
 
@@ -33,22 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('.sidebar a');
 
   // Verifica qual página está sendo carregada
-  let produtos = document.querySelectorAll('.list-vvariados'); // padrão
+  let produtos = document.querySelectorAll('.list-vvariados'); // padrão (variados)
 
   // Se for a página de cimento, troca o seletor:
   if (document.querySelector('.list-vcimento')) {
     produtos = document.querySelectorAll('.list-vcimento');
   }
 
+  // Se for a página de barro, troca o seletor:
   if (document.querySelector('.list-vbarro')) {
     produtos = document.querySelectorAll('.list-vbarro');
   }
 
-  
-
-  // Se não tiver produtos (nenhuma das duas páginas), sai fora
+  // Se não tiver produtos (nenhuma das três páginas), sai fora
   if (!links.length || !produtos.length) return;
 
+  // Adiciona evento nos links da sidebar
   links.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
@@ -59,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       links.forEach(l => l.classList.remove('ativo'));
       link.classList.add('ativo');
 
-      // Filtra os produtos
+      // Filtra os produtos da página atual
       produtos.forEach(produto => {
         const prodCat = produto.dataset.categoria.toLowerCase().trim();
         produto.style.display =
