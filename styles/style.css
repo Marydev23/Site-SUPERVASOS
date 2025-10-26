@@ -103,10 +103,55 @@ body {
   background: #1b5e20;
 }
 
+
+/*Tira verde*/
+
+/* --- TIRA VERDE SUPERIOR --- */
+.tira-verde {
+  background-color:var(--verde);       /* Verde forte e agradável */
+  color: #fff;                     /* Texto branco */
+  font-size: 0.95rem;
+  padding: 6px 20px;               /* Altura da faixa */
+  width: 100%;
+}
+
+.tira-conteudo {
+  display: flex;
+  justify-content: space-between;  /* Instagram à esquerda / Contatos à direita */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tira-contatos {
+  display: flex;
+  gap: 20px;                       /* Espaço entre os telefones */
+}
+
+.tira-contatos p {
+  margin: 0;
+}
+
+.tira-redes a {
+  color: #fff;                     /* Ícone e texto brancos */
+  text-decoration: none;           /* Remove sublinhado */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;                        /* Espaço entre ícone e texto */
+  transition: 0.3s;
+}
+
+.tira-redes a:hover {
+  color: #c8facc;                  /* Tom claro ao passar o mouse */
+}
+
+
+
 /*capa banner*/
 
 .capa-banner {
-   position: relative;
+  position: relative;
   width: 100%; 
   overflow: hidden; 
 }
@@ -125,7 +170,7 @@ body {
 
 .slide {
   min-width: 100%;
-  height: 80vh;              /* ajuste a altura como preferir */
+  height: 90vh;              /* ajuste a altura como preferir */
   position: relative;        /* importante para posicionar o conteúdo dentro */
   overflow: hidden;
 }
@@ -206,7 +251,7 @@ body {
   z-index: 10;
 
 }
-/*ta desfocando a imagem*/
+
 
 
 .prev { left: 12px; }
@@ -275,7 +320,7 @@ body {
   display: block;
   width: 70px;
   height: 4px;
-  background: #3a5a40; /* verde escuro elegante */
+  background: #3a5a40; 
   margin-top: 10px;
   border-radius: 2px;
 }
@@ -327,7 +372,8 @@ body {
   font-weight: 500;
 }
 
-/* Container */
+/* CONTAINER CATALAGO -------------------------------- */
+
 .catalago {
   padding: 60px 20px;
   background: #fafafa;
@@ -347,6 +393,7 @@ body {
 }
 
 /* Menu de Categorias */
+
 .list-opcao {
   display: flex;
   justify-content: center;
@@ -489,9 +536,9 @@ body {
 /* ------------------ Sidebar lateral ------------------ */
 .sidebar {
   width: 220px;
-  background-color: #fff;              /* branco por dentro */
+  background-color: #fff;              
   padding: 20px;
-  border-left: 4px solid var(--cinza-cimento);         /* contorno */
+  border-left: 4px solid var(--cinza-cimento);         
   min-height: 100vh;
   position: sticky;
   top: 0;
@@ -504,8 +551,8 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   padding: 8px;
-  background-color: #f5f5f5;  /* cinza leve no título */
-  border-bottom: 1px solid #ddd; /* linha separadora sob o título */
+  background-color: #f5f5f5; 
+  border-bottom: 1px solid #ddd; 
 }
 
 
@@ -517,27 +564,27 @@ body {
 
 .sidebar ul li {
   margin: 0;
-  border-bottom: 1px solid #eee; /* linha separando os itens */
+  border-bottom: 1px solid #eee; 
 }
 
 .sidebar ul li:last-child {
-  border-bottom: none; /* tira a linha do último */
+  border-bottom: none; 
 }
 
 .sidebar ul li a {
-  display: block;              /* ocupa a largura inteira */
-  padding: 10px 12px;          /* espaço interno */
+  display: block;              
+  padding: 10px 12px;          
   text-decoration: none;
   color: #444;
   font-weight: 500;
   transition: all 0.3s ease;
-  border-radius: 4px;          /* cantos arredondados leves */
+  border-radius: 4px;          
 }
 
 .sidebar ul li a:hover {
-  background-color: #f5f5f5;   /* fundo cinza no hover */
-  color: var(--verde);         /* muda cor do texto */
-  padding-left: 18px;          /* dá um "empurrãozinho" pro texto */
+  background-color: #f5f5f5;   
+  color: var(--verde);         
+  padding-left: 18px;         
 }
 
 /* ------------------ Conteúdo da pagina catalago ------------------ */
@@ -656,11 +703,11 @@ body {
 .list-barro {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* alinhado à esquerda, acompanha sidebar */
+  justify-content: flex-start; 
   gap: 40px;
   padding: 50px 20px;
   background-color: #fafafa;
-  flex: 1; /* ocupa todo o espaço disponível ao lado da sidebar */
+  flex: 1; 
 }
 
 .list-vbarro{
@@ -710,12 +757,11 @@ body {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* suaviza o efeito */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; 
 }
 
 .list-vbarro img:hover {
-  transform: scale(1.2); /* aumenta em 20% */
-  /*box-shadow: 0 8px 20px rgba(0,0,0,0.8); /* sombra bonita */
+  transform: scale(1.2); 
   z-index: 2;
   position: relative;
 }
@@ -895,11 +941,11 @@ body {
 .lista-variados {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* alinhado à esquerda, acompanha sidebar */
+  justify-content: flex-start; 
   gap: 70px;
   padding: 60px 40px;
   background-color: #fafafa;
-  flex: 1; /* ocupa todo o espaço disponível ao lado da sidebar */
+  flex: 1; 
 }
 
 .list-vvariados{
@@ -909,7 +955,7 @@ body {
   padding: 20px;
   width: 220px;
   text-align: center;
-  transition: opacity 0.3s ease; /*ADICONAR PARA PASSAR TRANSIÇÃO BONITA */
+  transition: opacity 0.3s ease; 
 
 }
 .list-vvariados h4 {
@@ -918,6 +964,7 @@ body {
   color:#333333; /* verde */
   margin-bottom: 6px;
   padding: 15px;
+  font-family: 'Marcellus', serif;
 }
 
 
@@ -980,6 +1027,71 @@ body {
 
 .lista-vertical li a:hover {
   color: #EF6C00;
+}
+
+
+
+/* --- Seção Polietileno (versão menor) --- */
+.secao-polietileno {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 12px;
+
+}
+
+.container-polietileno {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.img-polietileno {
+  width: 100%;
+  height: 690px; /* 🔹 altura reduzida */
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.9);
+}
+
+.texto-polietileno {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 12px 20px;
+  border-radius: 8px;
+  max-width: 420px;
+}
+
+.texto-polietileno h2 {
+  font-size: 1.6rem; /* menor */
+  margin-bottom: 6px;
+}
+
+.texto-polietileno p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.btn-polietileno {
+  background: #9c6530;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.btn-polietileno:hover {
+  background: #70451d;
 }
 
 
@@ -1149,6 +1261,79 @@ body {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/*Politica de frete---------------------------------------*/
+
+.container-frete {
+    max-width: 900px; 
+    margin: 50px auto; 
+    padding: 30px 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.frete-texto h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c7a7b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.frete-texto p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.frete-texto p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =================== CONTEÚDO POLÍTICA DE TROCA =================== */
+
+
+.container-trocaedevolucao {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    background-color: #fff7f0;
+    border-left: 6px solid #f97316; 
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.troca-devolucao-texto h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--cor-cinza-escuro); 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.troca-devolucao-texto p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.troca-devolucao-texto ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.troca-devolucao-texto ul li {
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
 
@@ -1483,4 +1668,25 @@ body {
     font-size: 0.95rem;
     padding: 10px 20px;
   }
+  /* Responsivo */
+@media (max-width: 768px) {
+  .img-polietileno {
+    height: 220px;
+  }
+
+  .texto-polietileno {
+    left: 5%;
+    top: 55%;
+    padding: 10px 16px;
+    max-width: 90%;
+  }
+
+  .texto-polietileno h2 {
+    font-size: 1.3rem;
+  }
+
+  .texto-polietileno p {
+    font-size: 0.85rem;
+  }
+}
 
