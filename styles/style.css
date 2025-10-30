@@ -1,4 +1,4 @@
-/* Reset */
+/* ======================== RESET ======================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +7,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Paleta de cores */
+/* ======================== CORES ======================== */
 :root {
-  --verde: #2E7D32;       
-  --laranja: #EF6C00;     
-  --cinza-cimento: #BDBDBD; 
-  --bege: #F5F5DC;        
-  --branco: #ffffff;      
-  --preto: #212121;       
+  --verde: #2E7D32;
+  --laranja: #EF6C00;
+  --cinza-cimento: #BDBDBD;
+  --bege: #F5F5DC;
+  --branco: #ffffff;
+  --preto: #212121;
   --azul: #003b6f;
   --azul-claro: #00B0D8;
   --roxo: #5e4b8b;
@@ -23,17 +23,16 @@
   --marrom: #6B3F2B;
   --cor-barro: #C76B3A;
   --cor-cinza-escuro: #333333;
-
+  --preto-trans: rgba(0,0,0,0.45);
 }
 
-/* Body */
+/* ======================== BODY ======================== */
 body {
   background-color: var(--branco);
   color: var(--preto);
 }
 
-
-/* 🔝 HEADER */
+/* ======================== HEADER ======================== */
 .header-principal {
   background: var(--branco);
   border-bottom: var(--border);
@@ -44,25 +43,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px; /* altura fixa do header */
-  padding: 0 20px; /* espaço interno */
+  height: 50px;
+  padding: 0 20px;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  height: 100%; 
+  height: 100%;
 }
 
 .logo-container img {
-  height: 100%; 
-  width: auto;  
+  height: 100%;
+  width: auto;
   display: block;
-  max-height: 100px; 
+  max-height: 100px;
 }
 
-
-/* MENU */
+/* ======================== MENU ======================== */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -85,7 +83,29 @@ body {
   color: var(--verde);
 }
 
-/* BOTÃO WHATSAPP dos cards */
+/* ======================== MENU MOBILE ======================== */
+.menu-toggle {
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
+
+/* ======================== BOTÃO WHATSAPP ======================== */
 .btn-whatsapp {
   background: var(--verde);
   color: var(--branco);
@@ -103,21 +123,18 @@ body {
   background: #1b5e20;
 }
 
-
-/*Tira verde*/
-
-/* --- TIRA VERDE SUPERIOR --- */
+/* ======================== TIRA VERDE SUPERIOR ======================== */
 .tira-verde {
-  background-color:var(--verde);       /* Verde forte e agradável */
-  color: #fff;                     /* Texto branco */
+  background-color: var(--verde);
+  color: #fff;
   font-size: 0.95rem;
-  padding: 6px 20px;               /* Altura da faixa */
+  padding: 6px 20px;
   width: 100%;
 }
 
 .tira-conteudo {
   display: flex;
-  justify-content: space-between;  /* Instagram à esquerda / Contatos à direita */
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -125,41 +142,31 @@ body {
 
 .tira-contatos {
   display: flex;
-  gap: 20px;                       /* Espaço entre os telefones */
-}
-
-.tira-contatos p {
-  margin: 0;
+  gap: 20px;
 }
 
 .tira-redes a {
-  color: #fff;                     /* Ícone e texto brancos */
-  text-decoration: none;           /* Remove sublinhado */
+  color: #fff;
+  text-decoration: none;
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 6px;                        /* Espaço entre ícone e texto */
+  gap: 6px;
   transition: 0.3s;
 }
 
 .tira-redes a:hover {
-  color: #c8facc;                  /* Tom claro ao passar o mouse */
+  color: #c8facc;
 }
 
-
-
-/*capa banner*/
-
+/* ======================== BANNER ======================== */
 .capa-banner {
   position: relative;
-  width: 100%; 
-  overflow: hidden; 
-}
-.banner { 
-  position: relative; 
+  width: 100%;
+  overflow: hidden;
 }
 
-/* container que desliza */
+
 .slides {
   display: flex;
   width: 100%;
@@ -167,107 +174,74 @@ body {
   will-change: transform;
 }
 
-
 .slide {
   min-width: 100%;
-  height: 90vh;              /* ajuste a altura como preferir */
-  position: relative;        /* importante para posicionar o conteúdo dentro */
+  height: auto;
+  position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 80vh;
+  background: #f5f5f5;
 }
-
-/* imagem cobre todo o slide */
 
 .slide img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;         /* cobre toda a área */
-  object-position: bottom;   /* puxa a imagem pra baixo (mostra os vasos) */
+  height: auto;
+  object-fit: contain;
   display: block;
   filter: brightness(90%);
 }
 
-/* conteúdo que fica sobre a imagem (apenas no 1º slide) */
-.banner-conteudo {
+
+/* BANNER SECUNDÁRIO */
+.banner-conteudo2 {
   position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  max-width: 600px;
-  z-index: 10;
-  
-}
-
-.banner-conteudo h5 {
-  font-size: 4rem; /* Aumenta bem o título */
-  line-height: 1.4;
-  margin-bottom: 1rem;
-  color: var(--verde);
-  font-weight: 700;
-}
-
-.banner-conteudo p { 
-  margin-bottom: 2rem; 
-  font-size: 2rem; /* texto maior também */
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   color: #fff;
-  line-height: 1.4;
+  z-index: 2;
+  width: 90%;
+  max-width: 900px;
 }
 
-/* botão destaque */
-.btn-catalago {
+.banner-conteudo2 h1, .banner-conteudo2 p {
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
+}
+
+/* BOTÃO CONTATO */
+.btn-contato {
   display: inline-block;
   background: var(--verde);
   color: var(--branco);
-  padding: 0.7rem 1.5rem; /* altura menor e largura menor */
-  font-size: 1rem; /* tamanho do texto reduzido */
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
   border-radius: 8px;
   font-weight: 700;
   text-decoration: none;
-  margin-top: 1.5rem;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
 }
 
-.btn-catalago:hover {
+.btn-contato:hover {
   background: #fff;
   color: var(--verde);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 
-/* botões de navegação */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.45);
-  color: #fff;
-  border: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 10;
-
-}
-
-
-
-.prev { left: 12px; }
-.next { right: 12px; }
-
-
-/*sobre o produto */
-
-
-
+/* ======================== SEÇÃO SOBRE PRODUTOS ======================== */
 .produtos-sobre {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 80px 10%;
-  background: #f4f4f4; /* cor de fundo suave */
+  background: #f4f4f4;
 }
 
 .produto-sobre {
@@ -275,7 +249,7 @@ body {
   align-items: center;
   gap: 50px;
   max-width: 1200px;
-  flex-wrap: wrap; /* adapta bem em telas pequenas */
+  flex-wrap: wrap;
   background: #fff;
   padding: 40px;
   border-radius: 16px;
@@ -283,9 +257,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-.produto-sobre:hover {
-  transform: scale(1.01);
-}
+.produto-sobre:hover { transform: scale(1.01); }
 
 .produto-sobre img {
   width: 40%;
@@ -293,12 +265,12 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .produto-sobre img:hover {
   transform: scale(1.03);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+
 }
 
 .produtos-text {
@@ -311,8 +283,8 @@ body {
   color: #2c3e50;
   margin-bottom: 1.2rem;
   font-weight: 800;
-  position: relative;
   letter-spacing: 1px;
+  position: relative;
 }
 
 .produtos-text h2::after {
@@ -320,9 +292,8 @@ body {
   display: block;
   width: 70px;
   height: 4px;
-  background: #3a5a40; 
+  background: #3a5a40;
   margin-top: 10px;
-  border-radius: 2px;
 }
 
 .produtos-text p {
@@ -332,45 +303,40 @@ body {
   margin-bottom: 1rem;
 }
 
-.btn-saibamais{
-    display: inline-block;
+.btn-saibamais {
+  display: inline-block;
   padding: 12px 25px;
   background: var(--cor-cinza-escuro);
   color: #fff;
   border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.3s;
 }
 
-
-
-
-
-
-
-/* numeros */
+/* ======================== SEÇÃO NÚMEROS ======================== */
 .numeros {
-  padding: 3rem 2rem;
   text-align: center;
-  background: var(--branco);
+  padding: 40px 0;
 }
 
 .numeros-flex {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .numero-item h3 {
-  font-size: 2rem;
+  font-size: 28px;
   color: var(--azul);
 }
 
 .numero-item p {
-  margin-top: 0.5rem;
-  font-weight: 500;
+  font-size: 16px;
+  color: #555;
 }
+
+
 
 /* CONTAINER CATALAGO -------------------------------- */
 
@@ -502,16 +468,12 @@ body {
   background: #219150;
 }
 
-/* Corpo  */
-body {
-  background-color: #fff;
-  color: #212121;
-}
+
 
 /* ------------------ CATÁLOGO CIMENTO ------------------ */
 .container {
   display: flex;
-  align-items: flex-start; /* sidebar em cima e conteúdo do lado */
+  align-items: flex-start; 
   background: var(--branco);
 }
 
@@ -803,7 +765,7 @@ body {
 .list-vcimento h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--preto); /* verde */
+  color: var(--preto); 
   margin-bottom: 8px;
   font-family: 'Marcellus', serif;
   letter-spacing: 0.5px;
@@ -832,10 +794,10 @@ body {
 }
 
 .list-vcimento .tamanhos li::before {
-  content: "*"; /* bolinha estilizada */
+  content: "*"; 
   position: absolute;
   left: 0;
-  color: #2E7D32; /* verde igual ao título */
+  color: #2E7D32; 
 }
 
 
@@ -853,7 +815,7 @@ body {
 }
 
 .list-vcimento img:hover {
-  transform: scale(1.6); /* aumenta de forma suave */
+  transform: scale(1.6); 
   z-index: 2;
   position: relative;
 }
@@ -961,7 +923,7 @@ body {
 .list-vvariados h4 {
   font-size: 1rem; 
   font-weight: 600;
-  color:#333333; /* verde */
+  color:#333333; 
   margin-bottom: 6px;
   padding: 15px;
   font-family: 'Marcellus', serif;
@@ -974,12 +936,10 @@ body {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* suaviza o efeito */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; 
 }
 
 .list-vvariados img:hover {
-  /*transform: scale(1); /* aumenta em 20% */
- /* box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* sombra bonita */
   z-index: 2;
   position: relative;
 }
@@ -999,11 +959,12 @@ body {
 
 /*MUDA DE COR NO SIDEBAR */
 .sidebar a.ativo {
-  font-weight: bold;
-  color: var(--preto);
-  text-decoration: underline;
-  
+  background: var(--verde);
+  color: #fff;
+  border-radius: 4px;
+  padding-left: 12px;
 }
+
 
 
 
@@ -1050,7 +1011,7 @@ body {
 
 .img-polietileno {
   width: 100%;
-  height: 690px; /* 🔹 altura reduzida */
+  height: 690px; 
   object-fit: cover;
   display: block;
   filter: brightness(0.9);
@@ -1069,7 +1030,7 @@ body {
 }
 
 .texto-polietileno h2 {
-  font-size: 1.6rem; /* menor */
+  font-size: 1.6rem; 
   margin-bottom: 6px;
 }
 
@@ -1107,7 +1068,7 @@ body {
 
 .contato h2 {
   font-size: 2.5rem;
-  color: #2E7D32; /* verde principal */
+  color: #2E7D32; 
   margin-bottom: 30px;
 }
 
@@ -1189,7 +1150,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 50px 20px;
-  background-color: #f8f8f8; /* fundo suave */
+  background-color: #f8f8f8; 
 }
 
 .horario-endereco {
@@ -1197,11 +1158,11 @@ body {
   flex-wrap: wrap;
   max-width: 1200px;
   width: 100%;
-  gap: 40px; /* espaço entre info e mapa */
+  gap: 40px; 
 }
 
 .info {
-  flex: 1; /* ocupa metade do espaço disponível */
+  flex: 1; 
   min-width: 280px;
 }
 
@@ -1210,14 +1171,14 @@ body {
   font-size: 22px;
   text-transform: uppercase;
   margin-bottom: 12px;
-  border-bottom: 2px solid #ccc; /* linha fina abaixo do título */
+  border-bottom: 2px solid #ccc; 
   padding-bottom: 5px;
 }
 
 .horario-atendimento ul {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 25px; /* espaço entre listas */
+  margin-bottom: 25px;
 }
 
 .horario-atendimento li {
@@ -1227,14 +1188,14 @@ body {
 }
 
 .mapa {
-  flex: 1; /* ocupa a outra metade */
+  flex: 1; 
   min-width: 300px;
 }
 
 .mapa iframe {
   width: 100%;
   height: 100%;
-  border-radius: 8px; /* cantos arredondados */
+  border-radius: 8px; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
@@ -1252,7 +1213,7 @@ body {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
-  color: #2c3e50; /* título em tom escuro */
+  color: #2c3e50; 
 }
 
 .conteudo-venda section {
@@ -1340,43 +1301,83 @@ body {
 /* quem somos--------------------------------------------------------- */
 
 .quem-somos {
-  padding: 60px 20px;
+  padding: 80px 5%;
   background-color: #fafafa;
 }
 
+/* Layout principal */
 .container-sobre {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: center;
+  gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
+
 .imagem-sobre img {
   width: 100%;
-  max-width: 400px; /* aumenta o tamanho da imagem */
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  max-width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.imagem-sobre img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
 
 .texto-sobre {
   flex: 1;
-  min-width: 280px; /* evita quebra estranha em telas pequenas */
+  min-width: 300px;
 }
 
 .texto-sobre h2 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   color: #2E7D32;
-  margin-bottom: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.texto-sobre h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #4CAF50;
+  margin-top: 10px;
+  border-radius: 2px;
 }
 
 .texto-sobre p {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #3a3a3a;
+  margin-bottom: 18px;
   text-align: justify;
+  text-indent: 20px; 
+}
+
+.texto-sobre .assinatura-nomes {
+  margin-top: 30px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+.texto-sobre .assinatura-cargo {
+  margin-top: 4px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #757575;
+  text-align: center;
 }
 
 
@@ -1384,8 +1385,8 @@ body {
 /* footer FINAL DO SITE */
 
 .footer {
-  background: #2E7D32; /* verde principal */
-  color: #FFFFFF;       /* texto branco para contraste */
+  background: #2E7D32; 
+  color: #FFFFFF;      
   padding: 60px 20px 30px 20px;
   font-family: 'Poppins', sans-serif;
 }
@@ -1402,25 +1403,25 @@ body {
 
 .footer-col { flex: 1; min-width: 220px; }
 .lista-vertical {
-  list-style: none; /* remove marcadores */
+  list-style: none; 
   padding: 0;
   margin: 0;
 }
 
 .lista-vertical li {
-  margin-bottom: 10px; /* espaço entre os itens */
+  margin-bottom: 10px; 
 }
 
 .lista-vertical li a {
   text-decoration: none;
-  color: var(--branco); /* cor do link */
+  color: var(--branco); 
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .lista-vertical li a:hover,
 .lista-vertical li a.ativo {
-  color: #27ae60; /* verde destaque */
+  color: #27ae60; 
 }
 
 
@@ -1428,7 +1429,7 @@ body {
 .footer-col h4 {
   font-size: 1.2em;
   margin-bottom: 20px;
-  color: #FFFFFF; /* título branco */
+  color: #FFFFFF; 
   text-transform: uppercase;
   position: relative;
 }
@@ -1438,7 +1439,7 @@ body {
   display: block;
   width: 40px;
   height: 3px;
-  background: #F5F5DC; /* linha bege clara */
+  background: #F5F5DC; 
   margin-top: 6px;
   border-radius: 2px;
 }
@@ -1446,12 +1447,12 @@ body {
 .footer-col p, .footer-col a {
   font-size: 0.95em;
   margin-bottom: 12px;
-  color: #FFFFFF; /* texto branco */
+  color: #FFFFFF; 
   text-decoration: none;
   line-height: 1.6;
 }
 
-.footer-col a:hover { color: #EF6C00; } /* laranja no hover */
+.footer-col a:hover { color: #EF6C00; }
 
 .footer i { margin-right: 8px; color: #FFFFFF; font-size: 1.1em; }
 
@@ -1459,8 +1460,8 @@ body {
   text-align: center;
   margin-top: 40px;
   font-size: 0.85em;
-  color: #F5F5DC; /* bege para contraste suave */
-  border-top: 1px solid #BDBDBD; /* linha cinza cimento */
+  color: #F5F5DC; 
+  border-top: 1px solid #BDBDBD;
   padding-top: 15px;
 }
 /* Reset básico */
@@ -1470,7 +1471,6 @@ body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
 
 
 /* ------------------ Rodapé ------------------ */
@@ -1532,161 +1532,859 @@ body {
 }
 
 .footer-bottom {
-  width: 100%; 
-  text-align: center; 
-  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
   font-size: 0.85em;
   color: #F5F5DC;
   border-top: 1px solid #BDBDBD;
-  padding: 15px 0; 
-  background-color: #2E7D32; 
+ 
+}
 
+.footer-bottom .footer-credit {
+  font-size: 0.95em;
+  margin: 3px 0 0 0; 
+  color: #F5F5DC;
+  padding: 0.9px;
+}
+
+.footer-bottom .footer-credit span {
+  font-weight: bold;
+}
+
+/* WhatsApp flutuante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--verde);
+  font-size: 20px;
+  padding: 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
 }
  
 /* ------------------ RESPONSIVIDADE GERAL ------------------ */
 
-/* SOBRE NÓS */
+
+
+/*Tira verde*/
+@media(max-width:768px){
+  .tira-conteudo{
+    font-size: 0.6rem;
+  
+  }
+  
+  .tira-redes{
+    font-size: 0.2rem;
+  }
+
+}
+
+
+/*menu para celular */
 @media (max-width: 768px) {
-  .container-sobre {
+  .logo-container img {
+    width: 90px;
+    height: auto;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  
+  .menu-toggle {
+    display: flex;
+    width: 20px;
+    
+  }
+
+ 
+
+  /* Menu lateral retrátil */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 70vh;
+    background: #fff;
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 80px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+    z-index: 1500;
+  }
+
+  
+  .nav-menu.active {
+    right: 0;
+  }
+
+  /*lista dos menus*/
+  .nav-menu ul.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .nav-menu ul.menu li a {
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+  }
+
+  /* Botão WhatsApp mais discreto */
+  .whatsapp-button {
+    margin-top: 1.5rem;
+  }
+
+  .whatsapp-button .btn-whatsapp {
+    background: #25d366;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .whatsapp-button .btn-whatsapp i {
+    font-size: 1.1rem;
+  }
+
+}
+ 
+
+
+/*OS BANNER PRINCIPAIS AQUI */
+/* celular */
+@media (max-width: 768px) {
+
+  
+  .slide {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+
+  
+  .banner-conteudo2 {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
   }
 
-  .imagem-sobre img {
-    max-width: 100%;
+  .btn-contato {
+    font-size: 0.5rem;
+    padding: 7px 20px;
   }
+
+ 
 }
 
-/* BANNER (esconde ou ajusta botões) */
-@media (max-width: 700px) {
-  .banner-conteudo {
-    left: 4%;
-    max-width: 85%;
-    text-align: left;
-  }
-}
 
-  .banner-conteudo h1 {
-    font-size: 1.6rem;
-  }
-
-
-/* ------------------ CATÁLOGO CIMENTO ------------------ */
-
-/* Layout principal e sidebar */
+ /*  Seção Nosso Catálogo */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* sidebar vai para cima no celular */
+
+  .catalago-list h2 {
+    font-size: 22px; 
   }
 
-  .sidebar {
-    width: 100%;
-    border-right: none;
-    border-bottom: 2px solid #ddd;
-    min-height: auto;
-    position: relative; /* deixa de ser sticky no mobile */
+  .catalago-list p {
+    font-size: 15px; 
   }
 
-  .lista-vasos {
-    justify-content: center; /* centraliza os vasos */
-  }
-}
-
-/* Ajustes de grid e tamanhos */
-@media (max-width: 900px) {
-  .lista-vasos {
-    gap: 20px;
+  .list-opcao li {
+    font-size: 16px; 
   }
 
-  .list-vcimento {
-    width: 40%;
+  .list-opcao {
+    flex-direction: column; 
+    gap: 15px;
+    align-items: center;
   }
 }
 
-@media (max-width: 600px) {
-  .list-vcimento {
-    width: 100%;
+  
+ 
+ /* Responsivo numeros */
+@media (max-width: 768px) {
+  .numeros-flex {
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
   }
 
-  .container-footer {
+  .numero-item h3 {
+    font-size: 22px;
+    color: var(--azul);
+  }
+
+  .numero-item p {
+    font-size: 14px;
+  }
+}
+
+
+
+  /*catalago index*/
+  @media (max-width: 768px) {
+  .grid-produtos {
+    grid-template-columns: 1fr;
+  }
+
+  .card-produto img {
+    height: 150px;
+  }
+
+  .card-produto h3 {
+    font-size: 1rem;
+  }
+
+  .card-produto p {
+    font-size: 0.8rem;
+  }
+
+  .btn-whats{
+    font-size: 13px;
+
+  }
+
+  }
+
+
+  
+/*OPÇÃO PARA FAZER VASO POR MEDIDA*/
+
+@media (max-width:768px){
+  .personalizado h3{
+    font-size: 18px;
+  }
+  .personalizado p{
+    font-size: 14px;
+  }
+  .btn-solicitar{
+    font-size: 13px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+
+  /* Container Polietileno */
+  .container-polietileno {
     flex-direction: column;
-    gap: 20px;
-  }
-}
-
-/* ------------------ MAPA E ENDEREÇO ------------------ */
-@media (max-width: 880px) {
-  .horario-endereco {
-    flex-direction: column;
-    padding: 0 16px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 10px; 
+    box-sizing: border-box;
   }
 
-  .mapa iframe {
-    min-height: 300px;
+  .img-polietileno {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
   }
-}
 
-/* ------------------ PRODUTO: SEÇÃO SOBRE ------------------ */
-@media (max-width: 900px) {
+  .texto-polietileno {
+    width: 100%;         
+    max-width: 300px;    
+  }
+
+  .texto-polietileno h2 {
+    font-size: 1.2rem; 
+    margin-bottom: 5px;
+  }
+
+  .texto-polietileno p {
+    font-size: 0.9rem;
+    line-height: 1.2;  
+  }
+
+  .btn-polietileno {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  /* Outros blocos do site SOBRE */
   .produto-sobre {
     flex-direction: column;
     text-align: center;
   }
 
   .produto-sobre img {
-    width: 80%;
+    width: 100%;
+    height: auto;
   }
 
   .produtos-text h2 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
+
+  .produtos-text p {
+    font-size: 0.95rem;
+  }
+
+  .endereco {
+    flex-direction: column;
+  }
+
+  .mapa iframe {
+    height: 150px;
+  }
+
 }
 
-/* ------------------ CONTATO ------------------ */
+
+/*ENDEREÇO CEKULAR*/ 
 @media (max-width: 768px) {
-  .contato h2 {
-    font-size: 2rem;
+  .horario-endereco {
+    flex-direction: column; 
+    align-items: flex-start; 
   }
 
-  .contato h3 {
-    font-size: 1.5rem;
+  .horario-atendimento h3 {
+    font-size: 14px; 
+  }
+
+  .horario-atendimento ul li {
+    font-size: 13px; 
   }
 }
 
-@media (max-width: 480px) {
-  .contato form {
+/*RoDAPE CELULAR*/
+
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: left; 
+    padding: 30px 15px;
+  }
+
+  .container-footer {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
     gap: 15px;
   }
 
-  .contato input,
-  .contato textarea {
-    font-size: 0.95rem;
-    padding: 10px 12px;
+  .footer-col h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .footer-col p,
+  .footer-col a {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* Ícones */
+  .fa-solid.fa-phone,
+  .fa-solid.fa-envelope,
+  .fa-brands.fa-facebook-f,
+  .fa-brands.fa-instagram {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .lista-vertical li {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .footer-bottom {
+    font-size: 10px;
+    margin-top: 15px;
   }
 }
-  .contato button {
-    font-size: 0.95rem;
-    padding: 10px 20px;
-  }
-  /* Responsivo */
+
+/*PAGINA SOBRE--------------------------------------*/
+
 @media (max-width: 768px) {
-  .img-polietileno {
-    height: 220px;
+  .texto-sobre h2 {
+    font-size: 1.5rem; 
+    text-align: left; 
+    margin-bottom: 10px;
   }
 
-  .texto-polietileno {
-    left: 5%;
-    top: 55%;
-    padding: 10px 16px;
-    max-width: 90%;
+  .texto-sobre p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: justify; 
   }
 
-  .texto-polietileno h2 {
-    font-size: 1.3rem;
-  }
-
-  .texto-polietileno p {
+  .assinatura-nomes, .assinatura-cargo {
     font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .container-sobre {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .imagem-sobre img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
   }
 }
+/*--------------------------------------CATALAGOS________________________*/
+
+@media (max-width: 768px) {
+  .content-variados {
+    width: 100%;              
+    margin: 0 auto;          
+    text-align: center;       
+    padding: 10px;            
+  }
+
+  .content-variados h2 {
+    font-size: 18px;          
+    line-height: 1.3;
+  }
+
+  .content-variados p {
+    font-size: 13px;        
+    line-height: 1.4;
+  }
+
+  .content-variados .aviso {
+    font-size: 10px;         
+    color: #666;
+  }
+
+  /* Container principal empilha sidebar e produtos */
+  .container-variados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 10px;
+    background: #fafafa;
+  }
+
+  /* ===== Sidebar ===== */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto; 
+    height: auto;    
+    border-left: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+
+  .sidebar h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #3E4E32;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: none;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar ul li {
+    border: none;
+  }
+
+  .sidebar ul li a {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #3E4E32;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar ul li a:hover,
+  .sidebar ul li a.ativo {
+    background: var(--verde);
+    color: #fff;
+    border-color: var(--verde);
+  }
+
+  /* ===== Lista de Produtos ===== */
+  .lista-variados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .list-vvariados {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    width: 100%;
+    max-width: 180px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+
+  .list-vvariados:hover {
+    transform: scale(1.02);
+  }
+
+  .list-vvariados img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .list-vvariados h4 {
+    font-size: 0.9rem;
+    margin: 8px 0;
+    color: #333;
+  }
+
+  .btn-variados {
+    display: inline-block;
+    width: 100%;
+    background: var(--verde);
+    color: var(--branco);
+    padding: 8px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: background 0.3s ease;
+  }
+
+  .btn-variados:hover {
+    background: #3E4E32;
+  }
+}
+
+
+
+/*--------------------------------------VASOS DE BARRO---------------------*/
+
+
+/*CATÁLOGO VASOS DE BARRO */
+
+
+@media (max-width: 768px) {
+
+  .container-barro h2{
+    font-size: 26px;
+
+  }
+  .container-barro .aviso{
+    font-size: 16px;
+  }
+  
+  .container-vasobarro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 10px;
+    background: #fafafa;
+   
+  }
+
+
+  .container-vasobarro .sidebar {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .container-vasobarro .sidebar h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #3E4E32;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .container-vasobarro .sidebar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container-vasobarro .sidebar ul li a {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #3E4E32;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .container-vasobarro .sidebar ul li a:hover,
+  .container-vasobarro .sidebar ul li a.ativo {
+    background: var(--verde);
+    color: #fff;
+    border-color: var(--verde);
+  }
+
+  /* Lista de produtos */
+  .list-barro {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    width: 100%;
+    justify-items: center;
+    padding: 10px;
+    background: transparent;
+     background-color: var(--cinza);
+  }
+
+  .list-vbarro {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    width: 100%;
+    max-width: 100%; 
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+
+  .list-vbarro:hover {
+    transform: scale(1.02);
+  }
+
+  .list-vbarro img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .list-vbarro h4 {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #333;
+  }
+
+  .list-vbarro .descricao {
+    font-size: 0.8rem;
+    color: #555;
+   
+  }
+
+.list-vbarro .tamanhos {
+  font-size: 0.75rem;
+  text-align: center; 
+  padding: 0;
+  margin: 0; 
+  list-style: none; 
+}
+
+.list-vbarro .tamanhos li {
+  display: inline-block; 
+  margin: 1px 0; 
+}
+}
+
+
+
+/*--------------------------VASOS DE CIMENTO-----------------------------*/
+
+@MEDIA(max-width:768px){
+  .content h2{
+    font-size: 25px;
+  }
+
+  .content p{
+    font-size: 20px;
+  }
+
+  .content .aviso{
+    font-size: 13px;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 10px;
+    background: #fafafa;
+  }
+
+   .lista-vasos{
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    width: 100%;
+    justify-items: center;
+    padding: 10px;
+    background: transparent;
+    background-color: var(--cinza);
+  }
+
+   .list-vcimento{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    width: 100%;
+    max-width: 100%; 
+    text-align: center;
+    transition: transform 0.2s ease;
+    background-color: var(--cinza);
+  }
+
+  .list-vcimento img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .list-vcimento  h4 {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #333;
+  }
+
+  .list-vcimento  .descricao {
+    font-size: 0.8rem;
+    color: #555;
+   
+  }
+
+  .list-vcimento  .tamanhos {
+  font-size: 0.75rem;
+  text-align: center; 
+  padding: 0;
+  margin: 0; 
+  list-style: none; 
+}
+
+  .v .tamanhos li {
+  display: inline-block;
+  margin: 1px 0; 
+}
+}
+
+/*--------------------------politica Frete-----------------------------*/
+@media(max-width:768){
+  .frete-texto h1{
+    font-size: 20px;
+  }
+
+  .frete-texto p{
+    font-size: 12px;
+  }
+}
+
+/*--------------------------politica vendas-----------------------------*/
+
+@MEDIA(max-width:768px){
+  .conteudo-venda h1{
+    font-size: 20px;
+  }
+  .conteudo-venda h2{
+    font-size: 20px;
+  }
+  .conteudo-venda p{
+    font-size: 16px;
+  }
+  .conteudo-venda li{
+    font-size: 16px;
+  }
+}
+
+
+/*--------------------------politica devolução-----------------------------*/
+
+@MEDIA(max-width:768px){
+  .troca-devolucao-texto h1{
+    font-size: 23px;
+  }
+
+  .troca-devolucao-texto p{
+    font-size: 16px;
+  }
+ 
+  .troca-devolucao-texto li{
+    font-size: 16px;
+  }
+}
+
+
+/* Mostrar apenas zap flutuante  */
+@media (min-width: 769px) {
+  .whatsapp-float {
+    display: none;
+  }
+}
+
+
+
+
 

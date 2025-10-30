@@ -2,10 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
   <title>Super Vasos</title>
 
-  <!-- ✅ CSS principal -->
+  <!--  CSS principal -->
   <link rel="stylesheet" href="./styles/style.css" />
   <link rel="stylesheet" href="./styles/catalogo.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -31,63 +33,49 @@
 
   
   <!-- 🔝 HEADER -->
-  <header class="header-principal">
-    <div class="header-container">
-      
-      <!-- Logo -->
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="./imagens/logotipo2.png" alt="Logo Super Vasos"/>
-        </a>              
-      </div>
-
-      
-
-      <!-- Menu -->
-      <nav class="nav-menu">
-        <ul class="menu">
-          <li><a href="#">Início</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-          <li><a href="./sobre.html">Sobre Nós</a></li>
-          <li><a href="./contato.html">Contatos</a></li>
-        </ul>
-
-        <!-- Botão WhatsApp -->
-        <div class="whatsapp-button">
-          <a href="https://wa.me/5531987259019" target="_blank" rel="noopener" class="btn-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-        </div>
-      </nav> 
+<header class="header-principal">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="./imagens/logotipo2.png" alt="Logo Super Vasos"/>
+      </a>              
     </div>
-  </header>
 
+    <!-- Botão Hamburger (aparece só no celular) -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
+    <!-- Menu + WhatsApp -->
+    <nav class="nav-menu">
+      <ul class="menu">
+        <li><a href="#">Início</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="./sobre.html">Sobre Nós</a></li>
+        <li><a href="./contato.html">Contatos</a></li>
+      </ul>
 
-  <!--  Banner com carrossel -->
+      <div class="whatsapp-button">
+        <a href="https://wa.me/5531987259019" target="_blank" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <!--  Banner -->
   <section class="capa-banner" id="home">
     <div class="banner">
-
-      <div class="slides">
         <div class="slide">
-          <img src="./imagens/banner-in1.png" alt="Banner 1">
-          
-          <div class="banner-conteudo">
-            <h5>Super Vasos</h5>
-            <p>Vasos de cimento, barro, substrato e muito mais!</p>
-            <a href="#catalogo" class="btn-catalago">Veja nosso catálogo</a>
-          </div>
-        </div>
-
-        <div class="slide">
-          <img src="./imagens/banner-index2.png" alt="Banner 2">
-          <!-- sem texto aqui -->
-        </div>
+          <img src="./imagens/banner-index24.png" alt="Banner 2">
+          <div class="banner-conteudo2">
+          <a href="#catalogo" class="btn-contato">Nosso Catálogo</a>        </div>               
       </div>
-
-      <!-- botões de navegação para os lados-->
-      <button class="prev" aria-label="Anterior">&#10094;</button>
-      <button class="next" aria-label="Próximo">&#10095;</button>
-    </div>
+  
   </section>
 
 <section class="numeros">
@@ -278,14 +266,21 @@
 
   
 
-  <!-- Direitos -->
+  
+  <!-- Direitos e crédito -->
   <div class="footer-bottom">
-    <p>© 2025 Super Vasos CNPJ: 15.417.907/0001-28 .Todos os direitos reservados.</p>
+    <p>© 2025 Super Vasos CNPJ: 15.417.907/0001-28. Todos os direitos reservados.</p>
+    <p class="footer-credit">Desenvolvido por: <span>DM’s Tech</span></p>
   </div>
+
+  <!-- WhatsApp flutuante -->
+<a href="https://wa.me/5531987259019" class="whatsapp-float" target="_blank" rel="noopener">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
 </footer>
 
-
-  <!-- ✅ JS do carrossel -->
+  <!-- JS do carrossel -->
   <script src="./carrossel.js"></script>
 </body>
 </html>
