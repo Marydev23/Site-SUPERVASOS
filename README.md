@@ -1,12 +1,3 @@
-# 🪴 Site Super Vasos
-
-Site institucional para uma fábrica de vasos, com catálogo de produtos, páginas de políticas da loja e contato direto por WhatsApp e formulário.
-
-🔗 **Site no ar:** [supervasos.com.br](https://supervasos.com.br/)
-
----
-
-## 🚀 Funcionalidades
 <h1 align="center">🪴 Super Vasos</h1>
 
 <p align="center">
@@ -36,18 +27,17 @@ Este repositório contém o site completo, que **está publicado e sendo usado p
 
 > 💼 **Não é um projeto de estudo.** Foi um trabalho real: levantei o que o cliente precisava, desenvolvi o site do zero, configurei o domínio próprio e coloquei no ar.
 
-
-
 ## ✨ Funcionalidades
 
-- **Catálogo por categoria**: vasos de cimento (70+ modelos), vasos de barro (~30 modelos) e produtos para jardinagem (terras, seixos, casca de pinus e outros).
-- **Filtro por categoria** na lateral do catálogo, feito com JavaScript puro (sem bibliotecas).
-- **Integração com WhatsApp**: botão no menu e botão flutuante em todas as páginas, levando o cliente direto para a conversa com a fábrica.
-- **Formulário de contato** que envia mensagem para o e-mail da empresa, sem back-end próprio (via FormSubmit).
-- **Mapa do Google Maps** incorporado, mostrando a localização da fábrica.
-- **Layout responsivo** com menu hambúrguer no celular.
-- **SEO básico**: `title`, `meta description` e `keywords` na página inicial.
-- **Páginas institucionais**: Sobre nós, Política de Venda, Política de Frete e Política de Troca e Devolução.
+- **Página inicial** com apresentação da fábrica e destaques dos produtos
+- **Catálogos separados por material:** vasos de cimento (70+ modelos), vasos de barro (~30 modelos) e produtos para jardinagem (terras, seixos, casca de pinus e outros)
+- **Filtro por categoria** na lateral do catálogo, feito com JavaScript puro (sem bibliotecas)
+- **Integração com WhatsApp:** botão no menu e botão flutuante, levando o cliente direto para a conversa com a fábrica
+- **Formulário de contato** que envia a mensagem para o e-mail da empresa, sem back-end próprio (via FormSubmit)
+- **Mapa do Google Maps** incorporado, mostrando a localização da fábrica
+- **Layout responsivo**, adaptado para computador e celular, com menu hambúrguer
+- **SEO básico:** `title`, `meta description` e `keywords` na página inicial
+- **Páginas institucionais:** Sobre nós, Política de Venda (atacado e varejo), Política de Frete e Política de Troca e Devolução
 
 ## 🛠️ Tecnologias e decisões
 
@@ -68,12 +58,12 @@ Este repositório contém o site completo, que **está publicado e sendo usado p
 ```
 Site-SUPERVASOS/
 ├── index.html                    # Página inicial
-├── sobre.html                    # Sobre a empresa
+├── sobre.html                    # Sobre nós
 ├── contato.html                  # Formulário, mapa e contatos
 ├── catalogovasoscimento.html     # Catálogo de vasos de cimento
 ├── catalogovasosbarro.html       # Catálogo de vasos de barro
 ├── produtosvariavel.html         # Produtos para jardinagem
-├── carrossel.js                  # Filtro do catálogo e menu hambúrguer
+├── carrossel.js                  # Filtro por categoria e menu hambúrguer
 ├── styles/
 │   └── style.css                 # Estilos do site
 ├── rodape/                       # Políticas de venda, frete e troca
@@ -81,16 +71,16 @@ Site-SUPERVASOS/
 └── CNAME                         # Domínio personalizado do GitHub Pages
 ```
 
-## 🚀 Como rodar localmente
+## ▶️ Como executar localmente
 
-Não precisa instalar nada. Clone o repositório e abra no navegador:
+Não precisa instalar nada. O projeto é estático.
 
 ```bash
-git clone https://github.com/SEU-USUARIO/Site-SUPERVASOS.git
+git clone https://github.com/Marydev23/Site-SUPERVASOS.git
 cd Site-SUPERVASOS
 ```
 
-Depois, abra o `index.html` no navegador, ou use a extensão **Live Server** do VS Code. Se preferir um servidor local pelo terminal:
+Depois abra o arquivo `index.html` no navegador. Se preferir, use a extensão **Live Server** do VS Code, que atualiza a página sozinha a cada alteração. Também dá para subir um servidor local pelo terminal:
 
 ```bash
 python -m http.server 5501
@@ -110,76 +100,14 @@ Melhorias que já mapeei para as próximas versões:
 - [ ] Melhorar SEO e acessibilidade nas páginas internas
 - [ ] Adicionar aviso de indisponibilidade de produtos
 
-## 👤 Autor
+## 👩‍💻 Autora
 
-**SEU NOME**
-Desenvolvedor Front-end
+**Marilza de Souza Santos**
+Desenvolvedora Front-end
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/SEU-PERFIL)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/SEU-USUARIO)
-[![E-mail](https://img.shields.io/badge/E--mail-D14836?style=flat&logo=gmail&logoColor=white)](mailto:SEU-EMAIL@exemplo.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marilzadesouza)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Marydev23)
 
 ---
 
 <p align="center">Feito com dedicação para um cliente real. 🌱</p>
-- **Página inicial** com apresentação da fábrica e destaques dos produtos
-- **Catálogos separados** por material: vasos de cimento, vasos de barro e produtos variados
-- **Filtro por categoria** nos catálogos, feito com JavaScript
-- **Menu responsivo** com botão hambúrguer para celular
-- **Contato por WhatsApp**, com botões em todas as páginas
-- **Formulário de contato** com envio por e-mail (via FormSubmit)
-- **Páginas institucionais:** Sobre nós, Política de Frete, Política de Venda (atacado e varejo) e Política de Troca e Devolução
-- **Layout adaptado** para computador e celular
-
----
-
-## 🛠️ Tecnologias
-
-- **HTML5:** estrutura semântica das páginas
-- **CSS3:** layout, responsividade e estilo
-- **JavaScript:** filtro de produtos e menu hambúrguer
-- **Font Awesome:** ícones
-- **FormSubmit:** envio do formulário de contato
-- **GitHub Pages:** hospedagem, com domínio próprio
-
----
-
-## 📁 Estrutura do projeto
-
-```
-Site-SUPERVASOS/
-├── index.html                    # Página inicial
-├── sobre.html                    # Sobre nós
-├── contato.html                  # Formulário de contato
-├── catalogovasoscimento.html     # Catálogo de vasos de cimento
-├── catalogovasosbarro.html       # Catálogo de vasos de barro
-├── produtosvariavel.html         # Produtos variados
-├── carrossel.js                  # Filtro por categoria e menu hambúrguer
-├── styles/
-│   └── style.css                 # Estilos do site
-├── rodape/                       # Páginas de políticas da loja
-├── imagens/                      # Imagens dos produtos e banners
-└── CNAME                         # Domínio personalizado
-```
-
----
-
-## ▶️ Como executar localmente
-
-Não precisa instalar nada. O projeto é estático.
-
-```bash
-git clone https://github.com/Marydev23/Site-SUPERVASOS.git
-cd Site-SUPERVASOS
-```
-
-Depois abra o arquivo `index.html` no navegador. Se preferir, use a extensão **Live Server** do VS Code, que atualiza a página sozinha a cada alteração.
-
----
-
-
-
-## 👩‍💻 Autora
-
-**Marilza de Souza Santos**
-[LinkedIn](https://www.linkedin.com/in/marilzadesouza) · [GitHub](https://github.com/Marydev23)
