@@ -91,19 +91,12 @@ python -m http.server 5501
 
 O site é publicado com o **GitHub Pages** direto da branch `main`. O arquivo `CNAME` aponta para o domínio `supervasos.com.br`, que foi configurado por mim no registro DNS.
 
-## 🔭 Próximos passos
 
-Melhorias que já mapeei para as próximas versões:
-
-- [ ] Gerar os cards do catálogo a partir de um arquivo JSON, em vez de HTML repetido
-- [ ] Otimizar imagens (converter para WebP e comprimir os banners) para carregar mais rápido
-- [ ] Melhorar SEO e acessibilidade nas páginas internas
-- [ ] Adicionar aviso de indisponibilidade de produtos
 
 ## 👩‍💻 Autora
 
 **Marilza de Souza Santos**
-Desenvolvedora Front-end
+
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marilzadesouza)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Marydev23)
