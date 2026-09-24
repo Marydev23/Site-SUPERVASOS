@@ -39,6 +39,8 @@ Este repositório contém o site completo, que **está publicado e sendo usado p
 - **SEO básico:** `title`, `meta description` e `keywords` na página inicial
 - **Páginas institucionais:** Sobre nós, Política de Venda (atacado e varejo), Política de Frete e Política de Troca e Devolução
 
+  
+
 ## 🛠️ Tecnologias e decisões
 
 | Tecnologia | Uso |
@@ -91,7 +93,12 @@ python -m http.server 5501
 
 O site é publicado com o **GitHub Pages** direto da branch `main`. O arquivo `CNAME` aponta para o domínio `supervasos.com.br`, que foi configurado por mim no registro DNS.
 
+## ⚖️ Direitos e uso
 
+Projeto desenvolvido para a Super Vasos e publicado com autorização do cliente,
+para fins de portfólio. A marca, o logotipo, as imagens e os textos pertencem à
+Super Vasos. Todos os direitos reservados: não é permitida a cópia ou o reuso
+do código e do conteúdo sem autorização.
 
 ## 👩‍💻 Autora
 
