@@ -177,13 +177,7 @@ Depois abra o arquivo `index.html` no navegador. Se preferir, use a extensão **
 
 ---
 
-## 🚧 Próximos passos
 
-- Otimizar as imagens dos banners para o site carregar mais rápido
-- Finalizar o filtro por categoria no catálogo de vasos de cimento
-- Adicionar mapa de localização na página de contato
-
----
 
 ## 👩‍💻 Autora
 
