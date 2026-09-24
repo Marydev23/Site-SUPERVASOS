@@ -36,15 +36,7 @@ Este repositório contém o site completo, que **está publicado e sendo usado p
 
 > 💼 **Não é um projeto de estudo.** Foi um trabalho real: levantei o que o cliente precisava, desenvolvi o site do zero, configurei o domínio próprio e coloquei no ar.
 
-## 🖼️ Preview
 
-<!-- Troque pelos seus prints. Sugestão: crie a pasta /docs e salve as imagens lá. -->
-<p align="center">
-  <img src="docs/preview-desktop.png" alt="Página inicial no desktop" width="80%"/>
-</p>
-<p align="center">
-  <img src="docs/preview-mobile.png" alt="Site no celular" width="30%"/>
-</p>
 
 ## ✨ Funcionalidades
 
